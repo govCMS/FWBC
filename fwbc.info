@@ -1,0 +1,18 @@
+name = FWBC
+description = FWBC theme.
+version = VERSION
+core = 7.x
+engine = phptemplate
+
+stylesheets[all][] = style.css
+stylesheets[print][] = css/print.css
+
+scripts[] = js/jquery-1.7.1.min.js
+scripts[] = js/slideshow.js
+scripts[] = js/jquery.cycle.lite.js
+scripts[] = js/custom.js
+
+; Information added by drupal.org packaging script on 2012-10-15
+version = "7.15"
+project = "FWBC"
+datestamp = "1321351835"
