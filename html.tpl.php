@@ -85,7 +85,11 @@
 			<input type="submit" value="Search" id="searchBtn" /></p>
 		</form>
 	</div>
-	<div id="logo"><a href="<?php echo home_url(); ?>" title="<?php echo $site_name; ?>"><img src="<?php theme_url(); ?>/images/govt_logo.png" alt="<?php echo $site_name; ?>" width="330" height="97" /></a></div>
+	<div id="logo"><a href="<?php echo home_url(); ?>" title="<?php echo $site_name; ?>">
+			<svg width="330" height="97">
+				<image xlink:href="<?php theme_url(); ?>/images/govt_logo.svg" src="<?php theme_url(); ?>/images/govt_logo.png" width="330" height="97" alt="<?php echo $site_name; ?>" width="330" height="97" />
+			</svg>
+		</a></div>
 </div>
 <div class="content">
 	<?php the_main_menu(); ?>
