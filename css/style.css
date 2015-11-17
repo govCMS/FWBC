@@ -126,7 +126,7 @@ img{
 
 body
 {
- background: #dad8cd url(images/bg_image.jpg) no-repeat top center;
+ background: #dad8cd url(../images/bg_image.jpg) no-repeat top center;
  text-align: center;
  padding: 0;
  margin: 0;
@@ -341,7 +341,7 @@ p.category
  height: 32px;
  margin-bottom: 15px;
  padding-top: 6px;
- background: #30373e url(images/dark_gradient.jpg) repeat-x top;
+ background: #30373e url(../images/dark_gradient.jpg) repeat-x top;
  width:100%;
  position:relative;
 }
@@ -350,7 +350,7 @@ p.category
 #globalNavigation a
 {
  padding: 7px 10px;
- background: #3a6265 url(images/gradients.jpg) repeat-x top;
+ background: #3a6265 url(../images/gradients.jpg) repeat-x top;
  color: #fff;
  display: inline-block;
 }
@@ -442,7 +442,7 @@ p.category
 
 #searchBtn
 {
- background: transparent url(images/search_btn.png) no-repeat top left;
+ background: transparent url(../images/search_btn.png) no-repeat top left;
  width: 19px;
  height: 18px;
  display: block;
@@ -458,7 +458,7 @@ p.category
 #searchBtn:focus,
 #searchBtn:active
 {
- background: transparent url(images/search_btn.png) no-repeat bottom left;
+ background: transparent url(../images/search_btn.png) no-repeat bottom left;
  outline: none;
 }
 
@@ -469,7 +469,7 @@ p.category
 
 #mainMenu
 {
- background: #3a6265 url(images/gradients.jpg) repeat-x top;
+ background: #3a6265 url(../images/gradients.jpg) repeat-x top;
  height: 38px;
  padding: 0;
  font-family: Arial, Helvetica, sans-serif;
@@ -519,7 +519,7 @@ p.category
  color: #fff;
  border-right: 1px solid #416f72;
  border-left: 1px solid #335659;
- background: #3a6265 url(images/gradients.jpg) repeat-x top;
+ background: #3a6265 url(../images/gradients.jpg) repeat-x top;
  font-family: 'Bitter';
  text-align:center;
 }
@@ -539,13 +539,13 @@ p.category
 #mainMenu li>a:focus,
 #mainMenu li>a:active
 {
- background: #30373e url(images/dark_gradient.jpg) repeat-x top;
+ background: #30373e url(../images/dark_gradient.jpg) repeat-x top;
 }
 
 
 #mainMenu li .current
 {
- background: #30373e url(images/dark_gradient.jpg) repeat-x top;
+ background: #30373e url(../images/dark_gradient.jpg) repeat-x top;
 }
 
 #mainMenu li ul li a
@@ -567,7 +567,7 @@ p.category
 #mainMenu li ul li a:focus,
 #mainMenu li ul li a:active
 {
- background: #414b53 url(images/dark_gradient.jpg) repeat-x top;
+ background: #414b53 url(../images/dark_gradient.jpg) repeat-x top;
 }
 
 .wideBox
@@ -633,7 +633,7 @@ background-repeat: no-repeat;
 }
 
 #industryUpdate.box {
-    background-image:url('images/blocks/industry-update-bg.png');
+    background-image:url('../images/blocks/industry-update-bg.png');
 }
 
 #industryUpdate.box h4 {
@@ -644,7 +644,7 @@ background-repeat: no-repeat;
 }
 
 #fwbcOnSite.box {
-    background-image:url('images/blocks/app-bg.png');
+    background-image:url('../images/blocks/app-bg.png');
 }
 
 #fwbcOnSite.box h2 {
@@ -668,7 +668,7 @@ background-repeat: no-repeat;
 }
 
 #noPermits.box {
-    background-image:url('images/blocks/nopermit-list-bg.png');
+    background-image:url('../images/blocks/nopermit-list-bg.png');
 }
 
 #noPermits.box h4 {
@@ -679,7 +679,7 @@ background-repeat: no-repeat;
 }
 
 #strike.box {
-    background-image:url('images/blocks/strike-bg.png');
+    background-image:url('../images/blocks/strike-bg.png');
 }
 
 #strike.box h2 {
@@ -695,7 +695,7 @@ background-repeat: no-repeat;
 }
 
 #buildingCode2013.box {
-    background-image:url('images/blocks/building-code-bg.png');
+    background-image:url('../images/blocks/building-code-bg.png');
 }
 
 #buildingCode2013.box h2 {
@@ -708,7 +708,7 @@ background-repeat: no-repeat;
 }
 
 #drugAndAlcohol.box {
-    background-image:url('images/blocks/drug-test-bg.png');
+    background-image:url('../images/blocks/drug-test-bg.png');
 }
 
 #drugAndAlcohol.box h2 {
@@ -887,13 +887,13 @@ ul.secondLevel
 {
  color: #fff;
  font-weight: bold;
- background: url(images/gradient_subnav.jpg) repeat-x top !important;
+ background: url(../images/gradient_subnav.jpg) repeat-x top !important;
 }
 #subNav li a.closed span
 {
  width: 10px;
  height: 11px;
- background: url(images/arrow_right.png) top left;
+ background: url(../images/arrow_right.png) top left;
  display: block;
  position: absolute;
  top: 11px;
@@ -904,7 +904,7 @@ ul.secondLevel
 {
  width: 11px;
  height: 10px;
- background: url(images/arrow_down.png) top left;
+ background: url(../images/arrow_down.png) top left;
  display: block;
  position: absolute;
  top: 13px;
@@ -984,7 +984,7 @@ ul.bulletlist li
 {
  padding: 3px 7px 7px 20px;
  margin-left: 7px;
- background: url(images/bullet.png) no-repeat 0 3px;
+ background: url(../images/bullet.png) no-repeat 0 3px;
  line-height: 18px;
 }
 
@@ -997,7 +997,7 @@ ul.bulletlist li
 {
  padding: 3px 7px 7px 20px;
  margin-left: 7px;
- background: url(images/bulletsmall.png) no-repeat 0 3px;
+ background: url(../images/bulletsmall.png) no-repeat 0 3px;
  line-height: 18px;
 }
 
@@ -1018,7 +1018,7 @@ ul.bulletlist li
 .contentBox ul li ul li
 {
  background: none;
- background: url(images/bulletsmall.png) no-repeat 0 3px;
+ background: url(../images/bulletsmall.png) no-repeat 0 3px;
  padding: 3px 7px 7px 20px;
  margin-left: 10px;
 }
@@ -1060,7 +1060,7 @@ span.date
 {
  width: 53px;
  height: 39px;
- background: url(images/corner.png) no-repeat top right;
+ background: url(../images/corner.png) no-repeat top right;
  position: absolute;
  top: 0;
  right: 0;
@@ -1113,7 +1113,7 @@ span.date
  color: #fff;
  border-right: 1px solid #e8e8e4;
  border-top: 1px solid #e8e8e4;
- background: #3a6265 url(images/gradients.jpg) repeat-x top;
+ background: #3a6265 url(../images/gradients.jpg) repeat-x top;
  width: ;
  text-align: center;
 }
@@ -1134,7 +1134,7 @@ span.date
 #pager ul li a:focus,
 #pager ul li a:active
 {
- background:  #374047 url(images/gradients.jpg) repeat-x center center;
+ background:  #374047 url(../images/gradients.jpg) repeat-x center center;
 }
 
 #pager ul li a:hover.selected,
@@ -1197,7 +1197,7 @@ ul.links a
 a.button
 {
  padding: 10px 10px;
- background: #3a6265 url(images/gradients.jpg) repeat-x top;
+ background: #3a6265 url(../images/gradients.jpg) repeat-x top;
  color: #fff;
  display: block;
  font-weight: bold;
@@ -1210,7 +1210,7 @@ a:focus.button,
 a:active.button
 {
  padding: 10px 10px;
- background: #374047 url(images/gradients.jpg) repeat-x center;
+ background: #374047 url(../images/gradients.jpg) repeat-x center;
  color: #fff;
  display: block;
  font-weight: bold;
@@ -1221,7 +1221,7 @@ a:active.button
 a.lightButton
 {
  padding: 7px 10px;
- background: url(images/gradients.jpg) repeat-x bottom;
+ background: url(../images/gradients.jpg) repeat-x bottom;
  color: #373F46;
  display: block;
  font-weight: bold;
@@ -1233,7 +1233,7 @@ a:focus.lightButton,
 a:active.lightButton
 {
  padding: 7px 10px;
- background: #374047 url(images/gradients.jpg) repeat-x center;
+ background: #374047 url(../images/gradients.jpg) repeat-x center;
  color: #fff;
  display: block;
  font-weight: bold;
@@ -1328,27 +1328,27 @@ a.icon
 
 .rss
 {
- background: url(images/rss.gif) no-repeat 0 2px;
+ background: url(../images/rss.gif) no-repeat 0 2px;
 }
 
 .twitter
 {
- background: url(images/twitter.gif) no-repeat 0 2px;
+ background: url(../images/twitter.gif) no-repeat 0 2px;
 }
 
 .email
 {
- background: url(images/email.gif) no-repeat 0 2px;
+ background: url(../images/email.gif) no-repeat 0 2px;
 }
 
 .flag
 {
- background: url(images/flag.gif) no-repeat 0 2px;
+ background: url(../images/flag.gif) no-repeat 0 2px;
 }
 
 .chat
 {
- background: url(images/chat.gif) no-repeat 0 2px;
+ background: url(../images/chat.gif) no-repeat 0 2px;
 }
 
 
@@ -1366,7 +1366,7 @@ a.icon
 #breadCrumbs a
 {
  display: inline-block;
- background: url(images/arrow_small.gif) no-repeat 100% 3px;
+ background: url(../images/arrow_small.gif) no-repeat 100% 3px;
  padding: 0 14px 2px 0;
  margin-right: 5px;
 }
@@ -1483,7 +1483,7 @@ a#printBtn
  display: inline-block;
 }
 #search-filter .btn {
-	background: url(images/gradients.jpg) 0 0 repeat-x;
+	background: url(../images/gradients.jpg) 0 0 repeat-x;
 	color: #fff;
 	font-family: Bitter;
 	font-weight: bold;
@@ -1556,7 +1556,7 @@ a#printBtn
  font-weight: bold;
  border-bottom: none;
  font-size: 12px;
- background:#406d70 url(images/gradients.jpg) repeat-x center;
+ background:#406d70 url(../images/gradients.jpg) repeat-x center;
  color: #fff;
 }
 .content .item-list .pager li.last,
@@ -1569,7 +1569,7 @@ a#printBtn
  border-bottom: none;
  font-size: 12px;
  color: #fff;
- background:#406d70 url(images/gradients.jpg) repeat-x top;
+ background:#406d70 url(../images/gradients.jpg) repeat-x top;
 }
 
 .pageNavigation a.disabled,
@@ -1784,7 +1784,7 @@ input.button, .contact-form .form-submit,
 #newsletter-signup-box .form-submit
 {
  padding: 5px 10px;
- background: #3a6265 url(images/gradients.jpg) repeat-x top;
+ background: #3a6265 url(../images/gradients.jpg) repeat-x top;
  color: #fff;
  display: block;
  font-weight: bold;
@@ -1799,7 +1799,7 @@ input:active.button,
 .contact-form input:focus.form-submit,
 .contact-form input:active.form-submit
 {
- background: #374047 url(images/gradients.jpg) repeat-x center;
+ background: #374047 url(../images/gradients.jpg) repeat-x center;
 }
 
 
@@ -1808,7 +1808,7 @@ input:active.button,
  width: 18px;
  height: 18px;
  display: block;
- background: url(images/pause_btn.png) no-repeat bottom;
+ background: url(../images/pause_btn.png) no-repeat bottom;
  position: absolute;
  bottom: 58px;
  right: 15px;
@@ -1817,7 +1817,7 @@ input:active.button,
 
 #pauseBtn.paused
 {
- background: url(images/pause_btn.png) no-repeat top;
+ background: url(../images/pause_btn.png) no-repeat top;
 }
 
 .toolTip
@@ -1899,14 +1899,14 @@ img.floatRight, .imageCaption.floatRight {
 
 .inThisIssue
 {
- background: #fff url(images/newsletter_corner.jpg) no-repeat top right;
+ background: #fff url(../images/newsletter_corner.jpg) no-repeat top right;
  padding: 0  !important;
  margin: 0 !important;
 }
 
 .inThisIssue.whiteCorner
 {
- background: #fff url(images/corner.png) no-repeat top right;
+ background: #fff url(../images/corner.png) no-repeat top right;
 }
 
 .inThisIssue h2
@@ -1935,7 +1935,7 @@ img.floatRight, .imageCaption.floatRight {
  padding: 8px 10px 8px 37px !important;
  font-size: 14px;
   margin: 0 !important;
- background: url(images/bullet.png) no-repeat 15px 9px !important;
+ background: url(../images/bullet.png) no-repeat 15px 9px !important;
 }
 
 #newsletterContent
@@ -2007,7 +2007,7 @@ img.floatRight, .imageCaption.floatRight {
  height: 35px;
  padding: 0 10px;
  line-height: 33px;
- background: url("images/gradients.jpg") repeat-x 0 0;
+ background: url("../images/gradients.jpg") repeat-x 0 0;
  color: #fff;
  text-align: center;
  text-transform: uppercase;
@@ -2015,7 +2015,7 @@ img.floatRight, .imageCaption.floatRight {
  font-family: "BitterBold",serif;
 }
 #newsletterContent .box .buttons a.top  {
-	background: url(images/gradient-orange.jpg) 0 0 repeat-x;
+	background: url(../images/gradient-orange.jpg) 0 0 repeat-x;
 }
 #newsletterContent .box .buttons a.more  {
 	width: 219px;
@@ -2023,7 +2023,7 @@ img.floatRight, .imageCaption.floatRight {
 #newsletterContent .box .buttons a:hover,
 #newsletterContent .box .buttons a:focus,
 #newsletterContent .box .buttons a:active{
-	background: url("images/gradients.jpg") 0 -38px repeat-x;
+	background: url("../images/gradients.jpg") 0 -38px repeat-x;
 	text-decoration: none;
 }
 #newsletterContent .wideBox
@@ -2115,7 +2115,7 @@ text-transform: uppercase;
 a.arrow
 {
  color: #fff;
- background: url(images/arrow.png) no-repeat 100% 5px;
+ background: url(../images/arrow.png) no-repeat 100% 5px;
  padding-right: 12px;
 }
 
@@ -2276,7 +2276,7 @@ table td.active{background:#fff;}
   right:0;
   top:0;
   z-index:15;
-  background:url(images/corner-news.png) no-repeat;
+  background:url(../images/corner-news.png) no-repeat;
   width:93px;
   height:75px;
 }
@@ -2797,7 +2797,7 @@ margin-bottom: 10px;
  font-size: 14px;
  width: 100% !important;
  text-align: center;
- background: url(images/gradients.jpg) repeat-x top left;
+ background: url(../images/gradients.jpg) repeat-x top left;
 }
 
 #logo
@@ -2888,7 +2888,7 @@ ul#tabs li a.selected
 	width:100%;
 	top:32px;
 	height:32px;
-	background:#30373e url(images/dark_gradient.jpg) repeat-x scroll;
+	background:#30373e url(../images/dark_gradient.jpg) repeat-x scroll;
 }
 #globalNavigation{
 	height:70px;
