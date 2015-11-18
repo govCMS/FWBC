@@ -90,12 +90,12 @@ function the_main_menu() {
 		$menu_html = '<ul id="mainMenu">'.chr(10);
 		foreach($menu_tree as $menu_item) {
 			if($menu_item['link']['hidden']==0){
-				$menu_html .= '<li'.$ul_li_class.'><div><a href="'.$menu_item['link']['link_path'].'">'.$menu_item['link']['link_title'].'</a>';
+				$menu_html .= '<li'.$ul_li_class.'><div>'.l($menu_item['link']['link_title'],$menu_item['link']['link_path']);
 				if (count($menu_item['below'])) {
 					$menu_html .= chr(10).'<ul>'.chr(10);
 					foreach($menu_item['below'] as $submenu_item) {
 						if($submenu_item['link']['hidden']==0){
-							$menu_html .= '<li><a href="'.$submenu_item['link']['link_path'].'">'.$submenu_item['link']['link_title'].'</a></li>'.chr(10);
+							$menu_html .= '<li>'.l($submenu_item['link']['link_title'],$submenu_item['link']['link_path']).'</li>'.chr(10);
 						}
 					}
 					$menu_html .= '</ul>'.chr(10);
