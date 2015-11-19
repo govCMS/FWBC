@@ -127,16 +127,16 @@ function the_footer_menu($menu_delta, $menu_params = array(), $lisep = '') {
 		$menu_html .= '>'.chr(10);
 		foreach($menu_tree as $menu_item) {
 			if ($first){
-				$menu_html .= '<h2><a href="'.$menu_item['link']['link_path'].'">'.$menu_item['link']['link_title'].'</a></h2><ul>';
+				$menu_html .= '<h2>'.l($menu_item['link']['link_title'],$menu_item['link']['link_path']).'</a></h2><ul>';
 				$first = '';
 				$menu_nmb--;
 				continue;
 			}
-			$menu_html .= '<li'.$ul_li_class.'>'.$menu_lisep.'<a href="'.$menu_item['link']['link_path'].'">'.$menu_item['link']['link_title'].'</a>';
+			$menu_html .= '<li'.$ul_li_class.'>'.$menu_lisep.l($menu_item['link']['link_title'], $menu_item['link']['link_path']);
 			if (count($menu_item['below'])) {
 				$menu_html .= chr(10).'<ul>'.chr(10);
 				foreach($menu_item['below'] as $submenu_item) {
-					$menu_html .= '<li><a href="'.$submenu_item['link']['link_path'].'">'.$submenu_item['link']['link_title'].'</a></li>'.chr(10);
+					$menu_html .= '<li>'.l($submenu_item['link']['link_title'], $submenu_item['link']['link_path']).'</li>'.chr(10);
 				}
 				$menu_html .= '</ul>'.chr(10);
 			}
@@ -166,11 +166,11 @@ function the_menu($menu_delta, $menu_params = array(), $lisep = '') {
 		}
 		$menu_html .= '>'.chr(10);
 		foreach($menu_tree as $menu_item) {
-			$menu_html .= '<li'.$ul_li_class.'>'.$menu_lisep.'<a href="'.$menu_item['link']['link_path'].'">'.$menu_item['link']['link_title'].'</a>';
+			$menu_html .= '<li'.$ul_li_class.'>'.$menu_lisep.l($menu_item['link']['link_title'], $menu_item['link']['link_path']);
 			if (count($menu_item['below'])) {
 				$menu_html .= chr(10).'<ul>'.chr(10);
 				foreach($menu_item['below'] as $submenu_item) {
-					$menu_html .= '<li><a href="'.$submenu_item['link']['link_path'].'">'.$submenu_item['link']['link_title'].'</a></li>'.chr(10);
+					$menu_html .= '<li>'.l($submenu_item['link']['link_title'], $submenu_item['link']['link_path']).'</li>'.chr(10);
 				}
 				$menu_html .= '</ul>'.chr(10);
 			}
@@ -375,6 +375,7 @@ if (strlen(@$_POST['form_id'])) {
 		}
 	}
 }
+
 function fwbc_html_head_alter(&$head_elements) {
 	foreach ($head_elements as $key => $element) {
 		if (isset($element['#attributes']['content'])) {
