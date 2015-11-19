@@ -103,8 +103,8 @@
 		</div>
 		<div class="wideBox">
 			<map id="footerlogos" name="footerlogos">
-				<area shape="rect" alt="Information Publication Scheme" title="Information Publication Scheme" coords="2,1,134,50" href="http://www.fwbc.gov.au/information-publication-scheme/" />
-				<area shape="rect" alt="Disclosure Log" title="Disclosure Log" coords="139,4,263,51" href="http://www.fwbc.gov.au/disclosure-log/" />
+				<area shape="rect" alt="Information Publication Scheme" title="Information Publication Scheme" coords="2,1,134,50" href="/information-publication-scheme" />
+				<area shape="rect" alt="Disclosure Log" title="Disclosure Log" coords="139,4,263,51" href="/disclosure-log" />
 			</map>
 			<img class="ips" usemap="#footerlogos" src="<?php theme_url(); ?>/images/ips_fdl_logos.jpg" alt="Information Publication Scheme, FOI Disclosure Log" width="271" height="53" />
 			<?php for ($fm=1; $fm<=5; $fm++) { the_footer_menu('menu-site-footer-menu-'.$fm, array('class' => 'footer-menu')); } ?>

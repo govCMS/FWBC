@@ -2984,3 +2984,12 @@ a.no-underline:hover {text-decoration: none;}
         box-sizing: border-box;
     }
 }
+
+/* GovCMS overrides */
+#site-map .content {
+    background: none;
+}
+#site-map .description {
+    display: none;
+    visibility: hidden;
+}
