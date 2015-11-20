@@ -104,8 +104,8 @@
 		</form>
 	</div>
 	<div id="logo"><a href="<?php echo home_url(); ?>" title="<?php echo $site_name; ?>">
-			<svg width="330" height="97">
-				<image xlink:href="<?php theme_url(); ?>/images/govt_logo.svg" src="<?php theme_url(); ?>/images/govt_logo.png" width="330" height="97" alt="<?php echo $site_name; ?>" width="330" height="97" />
+			<svg width="295" height="92">
+				<image xlink:href="<?php theme_url(); ?>/images/govt_logo.svg" src="<?php theme_url(); ?>/images/govt_logo.png" width="295" height="92" alt="<?php echo $site_name; ?>" width="330" height="97" />
 			</svg>
 		</a></div>
 </div>
