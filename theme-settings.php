@@ -84,11 +84,31 @@ function fwbc_form_system_theme_settings_alter(&$form, &$form_state) {
 			'#options' => $options,
 			'#default_value' => theme_get_setting('fwbc_newsletter_signup_form')
 		);
-		$form['fwbc_forms']['fwbc_newsletter_cm_subscribe_url'] = array(
-			'#type' => 'textfield',
-			'#title' => 'Campaign Monitor Subscribe URL',
+
+		$place_holder_text_api_key = 'Please provide API key';
+		if (theme_get_setting('fwbc_newsletter_cm_api_key')) {
+			$place_holder_text_api_key = 'API key hidden for your security';
+		}
+
+		$form['fwbc_forms']['fwbc_newsletter_cm_api_key'] = array(
+			'#type' => 'password',
+			'#title' => 'Campaign Monitor API key',
 			'#size' => 60,
-			'#default_value' => theme_get_setting('fwbc_newsletter_cm_subscribe_url')
+			'#default_value' => theme_get_setting('fwbc_newsletter_cm_api_key'),
+			'#attributes' =>array('placeholder' => t($place_holder_text_api_key)),
+		);
+
+		$place_holder_text_list_id = 'Please provide list ID';
+		if (theme_get_setting('fwbc_newsletter_cm_api_list_id')) {
+			$place_holder_text_list_id = 'List ID hidden for your security';
+		}
+
+		$form['fwbc_forms']['fwbc_newsletter_cm_api_list_id'] = array(
+			'#type' => 'password',
+			'#title' => 'Campaign Monitor API subscriber list ID',
+			'#size' => 60,
+			'#default_value' => theme_get_setting('fwbc_newsletter_cm_api_list_id'),
+			'#attributes' =>array('placeholder' => t($place_holder_text_list_id)),
 		);
 	}
 	// Home Slider Tabs (width)
