@@ -12,6 +12,8 @@ scripts[] = js/slideshow.js
 scripts[] = js/jquery.cycle.lite.js
 scripts[] = js/custom.js
 
+plugins[panels][layouts] = panels-layouts
+
 ; Information added by drupal.org packaging script on 2012-10-15
 version = "7.15"
 project = "FWBC"
