@@ -1,5 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<!--[if IEMobile 7]><html class="iem7" <?php print $html_attributes; ?>><![endif]-->
+<!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7" <?php print $html_attributes; ?>><![endif]-->
+<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8" <?php print $html_attributes; ?>><![endif]-->
+<!--[if IE 8]><html class="lt-ie9" <?php print $html_attributes; ?>><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html <?php print $html_attributes . $rdf_namespaces; ?>><!--<![endif]-->
+  
 <head>
   <link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
     <?php print $head; ?>
@@ -67,11 +72,7 @@
  </script><!-- End Google Tag Manager -->
 </head>
 
-<!--[if lt IE 7]><body class="no-js lt-ie9 lt-ie8 lt-ie7 <?php print $classes; ?>" <?php print $attributes; ?> style="padding:0px;"><![endif]-->
-<!--[if IE 7]><body class="no-js lt-ie9 lt-ie8 <?php print $classes; ?>" <?php print $attributes; ?> style="padding:0px;"><![endif]-->
-<!--[if IE 8]><body class="no-js lt-ie9 <?php print $classes; ?>" <?php print $attributes; ?> style="padding:0px;"><![endif]-->
-<!--[if gt IE 8]><!--><body class="no-js <?php print $classes; ?>" <?php print $attributes; ?> style="padding:0px;"><!--<![endif]-->
-
+<body class="no-js <?php print $classes; ?>" <?php print $attributes; ?> style="padding:0px;">
 
 <?php print $page_top; ?>
 <div id="globalNavigation" class="header-top">
