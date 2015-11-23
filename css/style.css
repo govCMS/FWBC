@@ -2552,7 +2552,7 @@ margin-top:-5px;
  margin-top: 10px;
  margin-bottom: 0;
  padding: 7px;
- width:auto;
+ width:100%;
 }
 #sign-up-newsletter-page .contact-form .webform-client-form #edit-actions{
 	padding:10px 10px 10px 0;
@@ -2594,9 +2594,11 @@ and (max-width : 1024px) {
     .box
     {
         box-sizing: border-box;
-        width: 30.5% !important;
-        height: 470px !important;
-}
+        width: 100%;
+        height: auto !important;
+        
+        
+    }
 
     .banner-item h2 {
         font-size: 25px !important;
