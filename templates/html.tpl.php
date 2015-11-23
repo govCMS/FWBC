@@ -1,7 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<!--[if IEMobile 7]><html class="iem7" <?php print $html_attributes; ?>><![endif]-->
+<!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7" <?php print $html_attributes; ?>><![endif]-->
+<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8" <?php print $html_attributes; ?>><![endif]-->
+<!--[if IE 8]><html class="lt-ie9" <?php print $html_attributes; ?>><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html <?php print $html_attributes . $rdf_namespaces; ?>><!--<![endif]-->
+  
 <head>
-  <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+  <link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
     <?php print $head; ?>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<?php
@@ -20,23 +25,23 @@
     <title><?php if($parent_title!="") { echo $parent_title . " | "; } echo $head_title; ?></title>
 	<meta name="viewport" content="width=device-width" />
 	<link rel="shortcut icon" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/favicon.ico" />
-	<link rel="apple-touch-icon" sizes="57x57" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192"  href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/favicon-16x16.png">
-	<link rel="manifest" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/manifest.json">
-	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="msapplication-TileImage" content="<?php print '/' . $base_path . path_to_theme(); ?>/icons/ms-icon-144x144.png">
-	<meta name="theme-color" content="#ffffff">
+	<link rel="apple-touch-icon" sizes="57x57" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-57x57.png" />
+	<link rel="apple-touch-icon" sizes="60x60" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-60x60.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-76x76.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-114x114.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-120x120.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-144x144.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-152x152.png" />
+	<link rel="apple-touch-icon" sizes="180x180" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-180x180.png" />
+	<link rel="icon" type="image/png" sizes="192x192"  href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/android-icon-192x192.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="96x96" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/favicon-96x96.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/favicon-16x16.png" />
+	<link rel="manifest" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/manifest.json" />
+	<meta name="msapplication-TileColor" content="#ffffff" />
+	<meta name="msapplication-TileImage" content="<?php print '/' . $base_path . path_to_theme(); ?>/icons/ms-icon-144x144.png" />
+	<meta name="theme-color" content="#ffffff" />
 	<!--<meta name="viewport" content="initial-scale=1.0">-->
 	<?php echo $styles; ?>
 	<?php echo $scripts; ?>
@@ -67,11 +72,7 @@
  </script><!-- End Google Tag Manager -->
 </head>
 
-<!--[if lt IE 7]><body class="no-js lt-ie9 lt-ie8 lt-ie7 <?php print $classes; ?>" <?php print $attributes; ?> style="padding:0px;"><![endif]-->
-<!--[if IE 7]><body class="no-js lt-ie9 lt-ie8 <?php print $classes; ?>" <?php print $attributes; ?> style="padding:0px;"><![endif]-->
-<!--[if IE 8]><body class="no-js lt-ie9 <?php print $classes; ?>" <?php print $attributes; ?> style="padding:0px;"><![endif]-->
-<!--[if gt IE 8]><!--><body class="no-js <?php print $classes; ?>" <?php print $attributes; ?> style="padding:0px;"><!--<![endif]-->
-
+<body class="no-js <?php print $classes; ?>" <?php print $attributes; ?> style="padding:0px;">
 
 <?php print $page_top; ?>
 <div id="globalNavigation" class="header-top">
