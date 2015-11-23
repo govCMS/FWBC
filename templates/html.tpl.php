@@ -19,6 +19,24 @@
     ?>
     <title><?php if($parent_title!="") { echo $parent_title . " | "; } echo $head_title; ?></title>
 	<meta name="viewport" content="width=device-width" />
+	<link rel="shortcut icon" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="57x57" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/favicon-16x16.png">
+	<link rel="manifest" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="<?php print '/' . $base_path . path_to_theme(); ?>/icons/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
 	<!--<meta name="viewport" content="initial-scale=1.0">-->
 	<?php echo $styles; ?>
 	<?php echo $scripts; ?>
@@ -86,8 +104,8 @@
 		</form>
 	</div>
 	<div id="logo"><a href="<?php echo home_url(); ?>" title="<?php echo $site_name; ?>">
-			<svg width="330" height="97">
-				<image xlink:href="<?php theme_url(); ?>/images/govt_logo.svg" src="<?php theme_url(); ?>/images/govt_logo.png" width="330" height="97" alt="<?php echo $site_name; ?>" width="330" height="97" />
+			<svg width="295" height="92">
+				<image xlink:href="<?php theme_url(); ?>/images/govt_logo.svg" src="<?php theme_url(); ?>/images/govt_logo.png" width="295" height="92" alt="<?php echo $site_name; ?>" width="330" height="97" />
 			</svg>
 		</a></div>
 </div>
@@ -103,8 +121,8 @@
 		</div>
 		<div class="wideBox">
 			<map id="footerlogos" name="footerlogos">
-				<area shape="rect" alt="Information Publication Scheme" title="Information Publication Scheme" coords="2,1,134,50" href="http://www.fwbc.gov.au/information-publication-scheme/" />
-				<area shape="rect" alt="Disclosure Log" title="Disclosure Log" coords="139,4,263,51" href="http://www.fwbc.gov.au/disclosure-log/" />
+				<area shape="rect" alt="Information Publication Scheme" title="Information Publication Scheme" coords="2,1,134,50" href="/information-publication-scheme" />
+				<area shape="rect" alt="Disclosure Log" title="Disclosure Log" coords="139,4,263,51" href="/disclosure-log" />
 			</map>
 			<img class="ips" usemap="#footerlogos" src="<?php theme_url(); ?>/images/ips_fdl_logos.jpg" alt="Information Publication Scheme, FOI Disclosure Log" width="271" height="53" />
 			<?php for ($fm=1; $fm<=5; $fm++) { the_footer_menu('menu-site-footer-menu-'.$fm, array('class' => 'footer-menu')); } ?>

@@ -208,12 +208,14 @@ $homepage_slides = views_get_view_result('homepage_slider');
 		<div class="corner"></div>
 		<?php the_block(34); ?>
 	</div>
-	<!-- <?php echo render($page['content']); ?> -->
+<div id="drugAndAlcohol" class="box">
+	<div class="corner"></div>
+	<div class="banner-item">
+		<h2><a href="http://www.fwbc.gov.au/drug-and-alcohol-testing-under-building-code-2013-0/">DRUG AND<br>ALCOHOL TESTING</h2>
+		<h4><a href="http://www.fwbc.gov.au/drug-and-alcohol-testing-under-building-code-2013-0/">New requirements under<br>the Building Code 2013 ></a></h4>
+	</div>
+</div>
 
-    <div id="drugAndAlcohol" class="box">
-        <div class="corner"></div>
-        <div class="banner-item">
-            <h2><a href="http://www.fwbc.gov.au/drug-and-alcohol-testing-under-building-code-2013-0/">DRUG AND<br>ALCOHOL TESTING</h2>
-            <h4><a href="http://www.fwbc.gov.au/drug-and-alcohol-testing-under-building-code-2013-0/">New requirements under<br>the Building Code 2013 ></a></h4>
-        </div>
-    </div>
+	<?php // echo render($page['content']); ?>
+
+
