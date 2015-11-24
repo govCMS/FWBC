@@ -106,7 +106,9 @@ switch (get_node_type($variables)) {
     ?>
     <h2><?php echo $title; ?></h2>
     <?php if (strlen($newsletter_image)) {
+    echo '<p>';
     print render($content['field_img']);
+    echo '</p>';
   } ?>
     <?php echo render($content); ?>
     <?php
