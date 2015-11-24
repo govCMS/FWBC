@@ -19,34 +19,39 @@
 				$parent_nid = get_nid_by_mlid($parent_mlid);
 				$parent_data = node_load($parent_nid);
 				$root_title = $parent_data->title;
+        $root_url = $parent_data->url;
 			}
 			$child_pages = get_child_pages($parent_mlid, $parent_nid);
 		}
+    $grampa = array_values($child_pages)[0]['parent'];
 		?>
-		<h2><?php echo $root_title; ?></h2>
-		<div class="corner"></div>
+    
+    <h2><a href="<?php echo $root_url; ?>"><?php echo $root_title; ?></a></h2>
+    <div class="corner"></div>
+    
 		<?php if (count($child_pages)) { ?>
-		<ul>
+    <ul <?php if (empty($grampa)) { echo ' class="top-level-selected"'; } ?>>
 			<?php
 			// first level
 			foreach($child_pages as $first_nid => $first_data) {
 				$s = '';
 				if ($curr_nid == $first_nid) {
-					$s = ' class="selected"';
+					$s = ' class="selected "';
 				} else if (count($first_data['childs'])) {
 					foreach($first_data['childs'] as $second_nid => $second_data) {
 						if ($curr_nid == $second_nid) {
-							$s = ' class="selected"';
+							$s = ' class="selected parent"';
 						} else if (count($second_data['childs'])) {
 							foreach($second_data['childs'] as $third_nid => $third_data) {
 								if ($curr_nid == $third_nid) {
-									$s = ' class="selected"';
+									$s = ' class="selected parent"';
 								}
 							}
 						}
 					}
 				}
 			?>
+    
 			<li<?php echo $s; ?>><a href="<?php echo page_url('node/'.$first_nid); ?>"><span></span><?php echo $first_data['title']; ?></a>
 				<?php if (count($first_data['childs'])) { ?>
 				<ul class="secondLevel">
@@ -59,7 +64,7 @@
 						} else if (count($second_data['childs'])) {
 							foreach($second_data['childs'] as $third_nid => $third_data) {
 								if ($curr_nid == $third_nid) {
-									$s = ' class="selected"';
+									$s = ' class="selected parent"';
 								}
 							}
 						}

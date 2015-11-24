@@ -2637,6 +2637,24 @@ and (max-width : 1024px) {
 }
 
 @media screen and (max-width: 650px) {
+    
+#subNav ul li:not(.selected) {
+ display: none;
+}
+
+#subNav ul li.selected:not(.parent) ul li {
+ display: block;
+}
+
+#subNav ul.top-level-selected li {
+ display: block;
+}
+
+#subNav, 
+.contentBox h1 {
+    margin-top: 2em !important;
+}
+    
 .contact-form .webform-client-form>div>.form-item>label{
   width:auto!important;
   padding:6px 10px 10px 0;
