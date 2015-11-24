@@ -13,7 +13,7 @@
 <head>
   <link rel="schema.dcterms" href="http://purl.org/dc/terms/"/>
   <?php print $head; ?>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <?php
   $parent_title = "";
   if (arg(0) == 'node' && is_numeric(arg(1))) {
@@ -50,10 +50,9 @@
   <meta name="msapplication-TileColor" content="#ffffff"/>
   <meta name="msapplication-TileImage" content="<?php print '/' . $base_path . path_to_theme(); ?>/icons/ms-icon-144x144.png"/>
   <meta name="theme-color" content="#ffffff"/>
-  <!--<meta name="viewport" content="initial-scale=1.0">-->
   <?php echo $styles; ?>
   <?php echo $scripts; ?>
-  <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'/>
+  <link href='https://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'/>
 </head>
 
 <body class="no-js <?php print $classes; ?>" <?php print $attributes; ?> style="padding:0px;">
