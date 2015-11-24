@@ -71,8 +71,7 @@
   </script><!-- End Google Tag Manager -->
 </head>
 
-<body class="no-js <?php print $classes; ?>" <?php print $attributes; ?>
-      style="padding:0px;">
+<body class="no-js <?php print $classes; ?>" <?php print $attributes; ?> style="padding:0px;">
 <?php print $page_top; ?>
 <div id="globalNavigation" class="header-top">
   <div class="wrapper">
@@ -104,30 +103,28 @@
     if (!strlen($keys)) {
       $keys = 'Search this site...';
     } ?>
-    <form
-      action="<?php echo page_url('node/' . theme_get_setting('fwbc_search_page')); ?>"
-      onsubmit="search_presubmit();">
-      <p><a href="<?php echo home_url(); ?>"
-            title="<?php echo $site_name; ?>"><img
-            src="<?php theme_url(); ?>/images/fwbc_logo.png"
-            alt="<?php echo $site_name; ?>" width="159" height="70"/></a></p>
-
-      <p><input type="text" name="keys" id="searchBox" title="Search this site"
+    <form action="<?php echo page_url('node/' . theme_get_setting('fwbc_search_page')); ?>" onsubmit="search_presubmit();">
+      <p>
+        <a href="<?php echo home_url(); ?>" title="<?php echo $site_name; ?>">
+          <img src="<?php theme_url(); ?>/images/fwbc_logo.png" alt="<?php echo $site_name; ?>" width="159" height="70"/>
+        </a>
+      </p>
+      <p>
+        <input type="text" name="keys" id="searchBox" title="Search this site"
                 value="<?php echo $keys; ?>"
                 onfocus="if(this.value=='Search this site...'){this.value='';}"
                 onblur="if(this.value==''){this.value='Search this site...';}"/>
-        <input type="submit" value="Search" id="searchBtn"/></p>
+        <input type="submit" value="Search" id="searchBtn"/>
+      </p>
     </form>
   </div>
-  <div id="logo"><a href="<?php echo home_url(); ?>"
-                    title="<?php echo $site_name; ?>">
+  <div id="logo">
+    <a href="<?php echo home_url(); ?>" title="<?php echo $site_name; ?>">
       <svg width="295" height="92">
-        <image xlink:href="<?php theme_url(); ?>/images/govt_logo.svg"
-               src="<?php theme_url(); ?>/images/govt_logo.png" width="295"
-               height="92" alt="<?php echo $site_name; ?>" width="330"
-               height="97"/>
+        <image xlink:href="<?php theme_url(); ?>/images/govt_logo.svg" src="<?php theme_url(); ?>/images/govt_logo.png" width="295" height="92" alt="<?php echo $site_name; ?>" width="330" height="97"/>
       </svg>
-    </a></div>
+    </a>
+  </div>
 </div>
 <div class="content">
   <?php the_main_menu(); ?>
