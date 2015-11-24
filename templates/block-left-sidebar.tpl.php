@@ -5,6 +5,7 @@
 		$node_book = @$node->book;
 		$node_type = $node->type;
 		$child_pages = array();
+    $root_url = $node->url;
 
 		$list_page = get_list_page($node_type);
 		if ($list_page) {
@@ -12,6 +13,7 @@
 			$node_data = node_load($curr_nid);
 			$node_book = $node_data->book;
 			$root_title = $node_data->title;
+      $root_url = $node_data->url;
 		}
 		if ($node_book) {
 			$parent_mlid = $node_book['p1'];
@@ -19,7 +21,7 @@
 				$parent_nid = get_nid_by_mlid($parent_mlid);
 				$parent_data = node_load($parent_nid);
 				$root_title = $parent_data->title;
-        $root_url = $parent_data->url;
+        $root_url = drupal_get_path_alias($parent_data->book['link_path']);
 			}
 			$child_pages = get_child_pages($parent_mlid, $parent_nid);
 		}
