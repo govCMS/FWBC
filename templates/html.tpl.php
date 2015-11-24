@@ -54,34 +54,8 @@
   <?php echo $styles; ?>
   <?php echo $scripts; ?>
   <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'/>
-  <!--<script type="text/javascript">
-              var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-              try { var pageTracker = _gat._getTracker("UA-3354058-1");
-              pageTracker._trackPageview(); } catch(err) {}
-      </script>-->
-  <script type="text/javascript">
-    (function (i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r;
-      i[r] = i[r] || function () {
-          (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-      a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-    ga('create', 'UA-3354058-1', 'auto');
-    ga('send', 'pageview');
-
-  </script>
   <!-- Google Tag Manager -->
-  <object id="gogletagmanager"
-          data="//www.googletagmanager.com/ns.html?id=GTM-KCP8H5"
-          type="text/html"></object>
+  <object id="gogletagmanager" data="//www.googletagmanager.com/ns.html?id=GTM-KCP8H5" type="text/html"></object>
   <script type="text/javascript"> $('#gogletagmanager').remove();</script>
   <script type="text/javascript">
     <![CDATA[
