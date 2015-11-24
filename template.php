@@ -75,29 +75,6 @@ function theme_url($echo = true)
   }
 }
 
-function image_path($img)
-{
-  return home_url() . 'sites/default/files/' . $img;
-}
-
-function get_thumb($iurl, $iw = '', $ih = '', $zc = '')
-{
-  $thumb = '';
-  if (strlen($iurl)) {
-    $thumb = theme_url(false) . '/timthumb.php?src=' . $iurl;
-    if (strlen($iw)) {
-      $thumb .= '&amp;w=' . $iw;
-    }
-    if (strlen($ih)) {
-      $thumb .= '&amp;h=' . $ih;
-    }
-    if (strlen($zc)) {
-      $thumb .= '&amp;zc=' . $zc;
-    }
-  }
-  return $thumb;
-}
-
 function the_main_menu()
 {
   $menu_html = '';
