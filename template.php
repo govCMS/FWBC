@@ -126,7 +126,7 @@ function the_footer_menu($menu_delta, $menu_params = array(), $lisep = '')
     $menu_html .= '>' . chr(10);
     foreach ($menu_tree as $menu_item) {
       if ($first) {
-        $menu_html .= '<h2>' . l($menu_item['link']['link_title'], $menu_item['link']['link_path']) . '</a></h2><ul>';
+        $menu_html .= '<h2>' . l($menu_item['link']['link_title'], $menu_item['link']['link_path']) . '</h2><ul>';
         $first = '';
         $menu_nmb--;
         continue;
