@@ -652,7 +652,7 @@ background-repeat: no-repeat;
     padding: 21px 0 0 28px;
 }
 
-#fwbcOnSite.box h2 a {
+#fwbc-on-site.box h2 a {
     color: #3b6468;
 }
 
@@ -663,7 +663,7 @@ background-repeat: no-repeat;
     word-spacing: 1px;
 }
 
-#fwbcOnSite.box h4 a {
+#fwbc-on-site.box h4 a {
     color: #484747;
 }
 
@@ -2072,7 +2072,7 @@ text-transform: uppercase;
 }
 
 .banner-item {
-	height:250px;
+	height:236px;
 }
 
 .banner-item h2 {
@@ -2080,14 +2080,14 @@ text-transform: uppercase;
     line-height: 39px;
     font-family: 'Bitter Regular', serif;
     font-weight: normal;
-    padding: 20px 0 0 18px;
+    padding: 8px 8px 4px 8px !important;
 }
 .banner-item h4 {
     font-size: 16px;
     line-height: 20px;
     font-family: 'Bitter Regular', serif;
     font-weight: normal;
-    padding: 78px 10px 5px 18px;
+    padding: 78px 10px 5px 8px;
     word-spacing: 1px;
     position: absolute;
     padding-top: 0 !important;
@@ -2144,6 +2144,24 @@ a.arrow
  color:#373F46;
  padding:8px 8px 5px;
  font-family:'Bitter', serif;
+}
+
+
+.view-homepage-tiles h2 {
+    font-size: 29px !important;
+    line-height: 29px;
+    margin-bottom: 8px;
+}
+
+.view-homepage-tiles ul li {
+    padding: 3px 7px 7px 20px;
+    margin-left: 5px;
+    background: url(../images/bullet.png) no-repeat 0 3px;
+    line-height: 18px;
+}
+
+#fwbc-on-site-new .banner-item h2 a, #fwbc-on-site-new .banner-item h4 a {
+    color: #3b6468 !important;
 }
 
 #home-latest-news .views-field-created
@@ -2605,7 +2623,7 @@ and (max-width : 1024px) {
         line-height: 28px !important;
         font-family: 'Bitter Regular', serif;
         font-weight: normal;
-        padding: 20px 20px 0 13px !important;
+        padding: 8px 8px 4px 8px !important;
     }
 
     .banner-item h4 {

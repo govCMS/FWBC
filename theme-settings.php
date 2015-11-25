@@ -111,6 +111,22 @@ function fwbc_form_system_theme_settings_alter(&$form, &$form_state) {
 			'#attributes' =>array('placeholder' => t($place_holder_text_list_id)),
 		);
 	}
+
+
+	$form['fwbc_homepage_news_block'] = array(
+		'#type' => 'fieldset',
+		'#title' => t('Homepage latest news block'),
+		'#weight' => -1
+	);
+
+	$form['fwbc_homepage_news_block']['fwbc_homepage_news_block_title'] = array(
+		'#type' => 'textfield',
+		'#title' => 'Homepage news block title',
+		'#size' => 20,
+		'#default_value' => theme_get_setting('fwbc_homepage_news_block_title')
+	);
+
+
 	// Home Slider Tabs (width)
 	$homepage_slides = views_get_view_result('homepage_slider');
 	if (count($homepage_slides)) {
