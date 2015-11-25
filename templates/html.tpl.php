@@ -52,7 +52,6 @@
   <meta name="theme-color" content="#ffffff"/>
   <?php echo $styles; ?>
   <?php echo $scripts; ?>
-  <link href='https://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'/>
 </head>
 
 <body class="no-js <?php print $classes; ?>" <?php print $attributes; ?> style="padding:0px;">
