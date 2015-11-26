@@ -396,6 +396,12 @@ if (strlen(@$_POST['form_id'])) {
         $wrap = new CS_REST_Subscribers($cm_list_id, $auth);
         $result = $wrap->add(array(
           'EmailAddress' => $cmemail,
+          'CustomFields' => array(
+            array(
+              'Key' => 'State',
+              'Value' => $cmstate
+            ),
+          ),
         ));
 
         if ($result->was_successful()) {
