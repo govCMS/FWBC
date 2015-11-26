@@ -8,7 +8,7 @@
                 $('#footer .footer-menu:first').addClass('first');
                 $('#mainMenu li:last').parents('li').addClass('last');
 
-                $('.addthis_button_compact').on('focus', function () {
+                $('.addthis_button_compact').live('focus', function () {
                     setTimeout(function () {
                         var n = 1;
                         $('#at15s a').each(function () {
@@ -20,10 +20,10 @@
                 $('#mainMenu > li').each(function () {
                     var first = $(this).find('a:first');
                     var last = $(this).find('a:last');
-                    first.on('focus', function () {
+                    first.live('focus', function () {
                         $(this).parents('li').addClass('focus');
                     })
-                    last.on('focusout', function () {
+                    last.live('focusout', function () {
                         $(this).parents('li').removeClass('focus');
                     })
                 })

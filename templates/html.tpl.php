@@ -6,7 +6,6 @@
 <!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html <?php print $html_attributes . $rdf_namespaces; ?>><!--<![endif]-->
 
 <head>
-  <?php print $head; ?>
   <?php
   $parent_title = "";
   if (arg(0) == 'node' && is_numeric(arg(1))) {
@@ -24,6 +23,8 @@
       echo $parent_title . " | ";
     }
     echo $head_title; ?></title>
+  <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+  <?php print $head; ?>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/favicon.ico">
@@ -40,8 +41,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/favicon-16x16.png">
-  <link rel="manifest" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/manifest.json"/>
-  <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+  <link rel="manifest" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="<?php print '/' . $base_path . path_to_theme(); ?>/icons/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
@@ -60,7 +60,6 @@
 			<span id="languageSlider">
 				<?php
                 $lnid = theme_get_setting('fwbc_language_assitance_page');
-                //$language_pages = get_child_pages(get_mlid_by_nid($lnid), $lnid);
                 if ($language_pages) {
                   foreach ($language_pages as $lp_nid => $lp_data) { ?>
                     <span><a
