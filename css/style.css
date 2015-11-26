@@ -3039,3 +3039,10 @@ a.no-underline:hover {text-decoration: none;}
     display: none;
     visibility: hidden;
 }
+.contentBox .site-map-menu ul li {
+    max-width: 380px;
+    padding: 3px 7px 7px 5px !important;
+}
+.contentBox ul li ul li {
+    padding: 3px 7px 7px 5px;
+}
