@@ -2343,6 +2343,11 @@ body {
 	background-position: left top!important;
 	min-width:320px;
 }
+
+.site-map-menu .leaf {
+    width: 260px;
+}
+
 .home-slide-item{height:195px;}
 .home-slide-item h2 {}
 .home-slide-item h2 a {}
