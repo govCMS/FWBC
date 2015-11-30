@@ -79,8 +79,22 @@
 							foreach($second_data['childs'] as $third_nid => $third_data) {
 								$s = '';
 								if ($curr_nid == $third_nid) { $s = ' class="selected"'; }
+								//echo '<pre>'; var_dump($third_data['childs']); echo '</pre>';
 							?>
-							<li<?php echo $s; ?>><a href="<?php echo page_url('node/'.$third_nid); ?>"><span></span><?php echo $third_data['title']; ?></a></li>
+							<li<?php echo $s; ?>><a href="<?php echo page_url('node/'.$third_nid); ?>"><span></span><?php echo $third_data['title']; ?></a>
+								<?php if (count($third_data['childs'])): ?>
+									<ul class="forthLevel">
+										<?php
+										// third level
+										foreach($third_data['childs'] as $forth_nid => $forth_data) {
+											$s = '';
+											if ($curr_nid == $forth_nid) { $s = ' class="selected"'; }
+											?>
+											<li<?php echo $s; ?>><a href="<?php echo page_url('node/'.$forth_nid); ?>"><span></span><?php echo $forth_data['title']; ?></a></li>
+										<?php } // foreach($third_data['childs'] as $forth_nid => $forth_data) { ?>
+									</ul>
+								<?php endif; ?>
+							</li>
 							<?php } // foreach($second_data['childs'] as $third_nid => $third_data) { ?>
 						</ul>
 						<?php } // if (count($second_data['childs'])) { ?>

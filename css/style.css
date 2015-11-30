@@ -952,6 +952,11 @@ ul.secondary a span
  text-decoration: none;
 }
 
+#subNav ul li ul.forthLevel li a:before
+{
+    content: '- ';
+}
+
 body.node-type-newsletter #subNav ul li a.closed {
     color: #fff;
     font-weight: bold;
