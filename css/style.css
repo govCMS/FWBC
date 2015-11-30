@@ -951,21 +951,28 @@ ul.secondary a span
  background: #dad8cd;
  text-decoration: none;
 }
-
-#subNav ul li ul.forthLevel li a:before
-{
-    content: '- ';
+#subNav ul li ul.fourthLevel li a {
+    padding: 7px 10px;
 }
-
+#subNav ul.thirdLevel li a.open span, #subNav ul.thirdLevel li a.closed span{
+    top: 8px;
+}
+#subNav ul li ul.fourthLevel li a:before
+{
+    content: '-';
+    padding-right: 0.5em;
+}
+#subNav ul.thirdLevel .selected a {
+    background: #f0efea;
+}
 body.node-type-newsletter #subNav ul li a.closed {
     color: #fff;
     font-weight: bold;
     background: url(../images/gradient_subnav.jpg) repeat-x top !important;
 }
-
-#leftContent
-{
-
+#subNav ul li ul.thirdLevel li a.open {
+    background: #f0efea !important;
+    color: #416F73;
 }
 
 #rightContent

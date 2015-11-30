@@ -83,7 +83,7 @@
 							?>
 							<li<?php echo $s; ?>><a href="<?php echo page_url('node/'.$third_nid); ?>"><span></span><?php echo $third_data['title']; ?></a>
 								<?php if (count($third_data['childs'])): ?>
-									<ul class="forthLevel">
+									<ul class="fourthLevel">
 										<?php
 										// third level
 										foreach($third_data['childs'] as $forth_nid => $forth_data) {
