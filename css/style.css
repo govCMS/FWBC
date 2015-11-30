@@ -1037,7 +1037,7 @@ ul.bulletlist li
  background: none;
  background: url(../images/bulletsmall.png) no-repeat 0 3px;
  padding: 3px 7px 7px 20px;
- margin-left: 10px;
+ margin-left: 0px;
 }
 
 .contentBox ol li ol li
@@ -3059,7 +3059,4 @@ a.no-underline:hover {text-decoration: none;}
 .contentBox .site-map-menu ul li {
     max-width: 380px;
     padding: 3px 7px 7px 5px !important;
-}
-.contentBox ul li ul li {
-    padding: 3px 7px 7px 5px;
 }
