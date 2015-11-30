@@ -1544,13 +1544,6 @@ a#printBtn
  display: inline;
 }
 
-#searchResults strong
-{
- font-weight: bold;
- font-family: 'Bitter';
- font-size: 15px;
-}
-
 .highlight
 {
  background: #f0ebe1;
