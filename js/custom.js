@@ -146,16 +146,6 @@
                     $('#searchBox').val('');
                 }
             }
-
-            // Search sort
-            function search_sort_by() {
-                var fval = $('#search-filter-sortby').val();
-                var sorder = 'DESC';
-                if (fval == 'title') {
-                    sorder = 'ASC';
-                }
-                $('#search-filter-sortorder').val(sorder);
-            }
         }
     };
 

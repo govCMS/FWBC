@@ -17,12 +17,11 @@
 					<input type="hidden" name="keys" value="<?php echo $_GET['keys']; ?>">
 					<label for="search-filter-sortby">Sort by:</label> 
 					<select id="search-filter-sortby" name="sort_by">
-						<option value="score">Relevance</option>
-						<option value="title"<?php if ($_GET['sort_by'] == 'title') { echo ' SELECTED'; } ?>>Title</option>
+						<option value="search_api_relevance">Relevance</option>
 						<option value="created"<?php if ($_GET['sort_by'] == 'created') { echo ' SELECTED'; } ?>>Date added</option>
 					</select>
 					<input type="submit" value="Sort" class="btn" />
-					<input type="hidden" name="sort_order" value="ASC" id="search-filter-sortorder">
+					<input type="hidden" name="sort_order" value="DESC" id="search-filter-sortorder">
 				</form>
 			</div>
 			<div id="searchResults">
