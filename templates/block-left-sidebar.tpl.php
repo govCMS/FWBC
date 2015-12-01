@@ -28,7 +28,7 @@
     $grampa = array_values($child_pages)[0]['parent'];
 		?>
     
-    <h2><a href="<?php echo $root_url; ?>"><?php echo $root_title; ?></a></h2>
+    <h2><a href="/<?php echo $root_url; ?>"><?php echo $root_title; ?></a></h2>
     <div class="corner"></div>
     
 		<?php if (count($child_pages)) { ?>
