@@ -851,12 +851,6 @@ ul.secondLevel {
     margin-left: 5px;
 }
 
-#subNav a.active, #subNav a.open {
-    color: #fff;
-    font-weight: bold;
-    background: url(../images/gradient_subnav.jpg) repeat-x top !important;
-}
-
 #subNav li a.closed span {
     width: 10px;
     height: 11px;
@@ -915,15 +909,12 @@ ul.secondary a span {
 
 #subNav ul li ul.fourthLevel li a {
     padding: 7px 10px;
+    padding-left: 17px;
+    font-size: 0.95em;
 }
 
 #subNav ul.thirdLevel li a.open span, #subNav ul.thirdLevel li a.closed span {
     top: 8px;
-}
-
-#subNav ul li ul.fourthLevel li a:before {
-    content: '-';
-    padding-right: 0.5em;
 }
 
 #subNav ul.thirdLevel .selected a {
@@ -931,8 +922,18 @@ ul.secondary a span {
 }
 
 body.node-type-newsletter #subNav ul li a.closed {
+    color: #416F73;
+    background: none !important;
+}
+
+#subNav a.active, #subNav a.open.closed {
     color: #fff;
     font-weight: bold;
+    background: url(../images/gradient_subnav.jpg) repeat-x top !important;
+}
+
+body.node-type-newsletter #subNav ul li a.open.closed {
+    color: #fff;
     background: url(../images/gradient_subnav.jpg) repeat-x top !important;
 }
 
