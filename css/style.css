@@ -738,7 +738,8 @@ p.category {
 }
 
 .headingBox.fullWidth {
-    width: 927px;
+    width: 100%;
+    max-width: 927px;
 }
 
 .headingBox {
@@ -1988,7 +1989,7 @@ img.floatRight, .imageCaption.floatRight {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
     margin-bottom: 0 !important;
-    bottom: 32px;
+    bottom: 16px;
 }
 
 .banner-item h2 a {
@@ -3022,14 +3023,13 @@ a.no-underline:hover {
     #fwbcOnSite.box {
         background-size: 250px;
     }
-
     .box {
         width: 100% !important;
         display: block;
         background-repeat: no-repeat;
-        background-size: cover;
         background-position: center center;
         box-sizing: border-box;
+        min-height: 300px;
     }
 }
 
