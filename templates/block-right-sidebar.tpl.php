@@ -2,6 +2,7 @@
 $right_sidebar_widgets = $variables["page"]["sidebar_second"];
 $fid = theme_get_setting('fwbc_newsletter_signup_form'); // newsletter sign up form ID
 ?>
+<?php if (isset($variables["page"]["sidebar_second"]) && !empty($right_sidebar_widgets)): ?>
 <div id="rightContent">
 	<?php if ($right_sidebar_widgets) {
 		foreach($right_sidebar_widgets as $right_sidebar_widget) {
@@ -35,3 +36,4 @@ $fid = theme_get_setting('fwbc_newsletter_signup_form'); // newsletter sign up f
 	}
 	?>
 </div>
+<?php endif; ?>
