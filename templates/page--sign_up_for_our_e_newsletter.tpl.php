@@ -3,8 +3,10 @@
  * Main page template
 */
 ?>
+<div>
 	<?php include('block-breadcrumb.tpl.php'); ?>
 	<?php include('block-left-sidebar.tpl.php'); ?>
+  <?php include('block-right-sidebar.tpl.php'); ?>
 	<div class="content-box">
 		<div id="leftContent">
 			<div id="sign-up-newsletter-page" class="contentBox">
@@ -18,6 +20,6 @@
 					echo render($page['content']);
 				} ?>
 			</div>
-			<?php include('block-right-sidebar.tpl.php'); ?>
 		</div>
 	</div>
+</div>

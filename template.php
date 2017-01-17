@@ -31,17 +31,17 @@ function fwbc_process_page(&$vars)
       $page_alias = 'newsletters';
     } else if (@$vars['node']->book) {
       if ($vars['node']->book["mlid"] != $vars['node']->book["p1"]) {
-        $pnid = get_nid_by_mlid($vars['node']->book["p1"]);
+        $pnid = fwbc_get_nid_by_mlid($vars['node']->book["p1"]);
         if ($pnid == theme_get_setting('fwbc_language_assitance_page')) {
           $page_alias = 'single_language_assitance';
         }
       }
     }
-    $is_landing = get_post_custom($vars['node'], 'field_landing_page');
+    $is_landing = fwbc_get_post_custom($vars['node'], 'field_landing_page');
     if ($is_landing) { // landing page
       $page_alias = 'landing_page';
     }
-    $page_template = get_post_custom($vars['node'], 'field_template');
+    $page_template = fwbc_get_post_custom($vars['node'], 'field_template');
     if (strlen($page_template)) {
       $page_alias = $page_template;
     }
@@ -49,13 +49,13 @@ function fwbc_process_page(&$vars)
   $vars['theme_hook_suggestions'][] = 'page__' . $page_alias;
 }
 
-function home_url()
+function fwbc_home_url()
 {
   global $base_url;
   return $base_url . '/';
 }
 
-function page_url($path)
+function fwbc_page_url($path)
 {
   global $base_root;
   $page_url = $base_root . url($path);
@@ -65,7 +65,7 @@ function page_url($path)
   return $page_url;
 }
 
-function theme_url($echo = true)
+function fwbc_theme_url($echo = true)
 {
   global $base_url, $theme_path;
   if ($echo) {
@@ -75,7 +75,7 @@ function theme_url($echo = true)
   }
 }
 
-function the_main_menu()
+function fwbc_the_main_menu()
 {
   $menu_html = '';
   $menu_tree = menu_tree_all_data('menu-site-main-menu');
@@ -83,6 +83,7 @@ function the_main_menu()
     $ul_li_class = ' class="first"';
     $menu_nmb = count($menu_tree);
     $menu_html = '<ul id="mainMenu">' . chr(10);
+    $menu_html .= '<li id="home"' . $ul_li_class . '><div><a href="/"><span class="hidden">Home</span></a></div></li>';
     foreach ($menu_tree as $menu_item) {
       if ($menu_item['link']['hidden'] == 0) {
         $menu_html .= '<li' . $ul_li_class . '><div>' . l($menu_item['link']['link_title'], $menu_item['link']['link_path']);
@@ -108,8 +109,9 @@ function the_main_menu()
   echo $menu_html;
 }
 
-function the_footer_menu($menu_delta, $menu_params = array(), $lisep = '')
+function fwbc_the_footer_menu($menu_delta, $menu_params = array(), $lisep = '')
 {
+  return;
   $menu_html = '';
   $menu_tree = menu_tree_all_data($menu_delta);
   if (count($menu_tree)) {
@@ -154,7 +156,7 @@ function the_footer_menu($menu_delta, $menu_params = array(), $lisep = '')
   echo $menu_html;
 }
 
-function the_menu($menu_delta, $menu_params = array(), $lisep = '')
+function fwbc_the_menu($menu_delta, $menu_params = array(), $lisep = '')
 {
   $menu_html = '';
   $menu_tree = menu_tree_all_data($menu_delta);
@@ -193,8 +195,11 @@ function the_menu($menu_delta, $menu_params = array(), $lisep = '')
   echo $menu_html;
 }
 
-function the_block($bl, $show_title = true)
+function fwbc_the_block($bl, $show_title = true)
 {
+  if ($bl === 0) {
+    return;
+  }
   $block_slug = 'block_' . $bl;
   $block_content = _block_render_blocks(array(block_load('block', $bl)));
   if ($show_title) {
@@ -203,26 +208,26 @@ function the_block($bl, $show_title = true)
   echo render($block_content[$block_slug]->content);
 }
 
-function get_post_added($submitted)
+function fwbc_get_post_added($submitted)
 {
   $submitted = substr($submitted, strpos($submitted, 'on ') + 3);
   $submitted = substr($submitted, 0, strpos($submitted, ' -'));
   return $submitted;
 }
 
-function get_post_term($node, $type)
+function fwbc_get_post_term($node, $type)
 {
   $post_categories = field_view_field('node', $node, $type);
   return $post_categories['#items'][0]['taxonomy_term']->name;
 }
 
-function get_post_custom($node, $field, $val = 'value')
+function fwbc_get_post_custom($node, $field, $val = 'value')
 {
   $custom_field = @$node->$field;
   return @$custom_field['und'][0][$val];
 }
 
-function get_page_type($vars)
+function fwbc_get_page_type($vars)
 {
   $node_data = $vars['node'];
   $ntype = $node_data->type;
@@ -239,7 +244,7 @@ function get_page_type($vars)
     $ntype = $ntypes[$node_data->nid];
   } else if (@$node_data->book) {
     if ($node_data->book["mlid"] != $node_data->book["p1"]) {
-      $pnid = get_nid_by_mlid($node_data->book["p1"]);
+      $pnid = fwbc_get_nid_by_mlid($node_data->book["p1"]);
       $pntypes = array(
         theme_get_setting('fwbc_language_assitance_page') => 'language_assitance',
         theme_get_setting('fwbc_faqs_page') => 'faqs'
@@ -253,7 +258,7 @@ function get_page_type($vars)
   return $ntype;
 }
 
-function get_node_type($vars)
+function fwbc_get_node_type($vars)
 {
   $node = $vars['node'];
   $ntype = $node->type;
@@ -266,7 +271,7 @@ function get_node_type($vars)
   return $ntype;
 }
 
-function get_list_page($type)
+function fwbc_get_list_page($type)
 {
   $list_page = false;
   switch ($type) {
@@ -283,11 +288,11 @@ function get_list_page($type)
   return $list_page;
 }
 
-function get_node_parents($nid)
+function fwbc_get_node_parents($nid)
 {
   $pid = 0;
   $node_data = node_load($nid);
-  $list_page = get_list_page($node_data->type);
+  $list_page = fwbc_get_list_page($node_data->type);
   if ($list_page) {
     $node_data = node_load($list_page);
     if ($node_data->book) {
@@ -298,10 +303,10 @@ function get_node_parents($nid)
       $pid = $node_data->book['plid'];
     }
   }
-  return get_parents($pid);
+  return fwbc_get_parents($pid);
 }
 
-function get_parents($mlid, $pars = '')
+function fwbc_get_parents($mlid, $pars = '')
 {
   $parents = false;
   if ($mlid > 0) {
@@ -314,7 +319,7 @@ function get_parents($mlid, $pars = '')
       //$pars = $node_data->vid.';'.$node_data->title.$pars;
       $pars = $node_data->nid . ';' . $node_data->title . $pars;
       if ($result->plid > 0) {
-        return get_parents($result->plid, $pars);
+        return fwbc_get_parents($result->plid, $pars);
       }
     }
     if ($pars) {
@@ -329,21 +334,21 @@ function get_parents($mlid, $pars = '')
   return $parents;
 }
 
-function get_child_pages($mlid, $nid)
+function fwbc_get_child_pages($mlid, $nid)
 {
   $child_pages = array();
   $child_nodes = db_query("SELECT m.mlid, b.nid, n.title FROM {menu_links} m LEFT JOIN {book} b ON b.mlid = m.mlid LEFT JOIN {node} n ON n.nid = b.nid WHERE m.plid = '" . $mlid . "' AND n.status > 0 AND n.type <> 'article' ORDER BY m.weight, n.title");
   if (count($child_nodes)) {
     foreach ($child_nodes as $child_node) {
       if ($child_node->nid) {
-        $child_pages[$child_node->nid] = array('title' => $child_node->title, 'parent' => $nid, 'childs' => get_child_pages($child_node->mlid, $child_node->nid));
+        $child_pages[$child_node->nid] = array('title' => $child_node->title, 'parent' => $nid, 'childs' => fwbc_get_child_pages($child_node->mlid, $child_node->nid));
       }
     }
   }
   return $child_pages;
 }
 
-function limit_content($content, $max_char, $more = '...')
+function fwbc_limit_content($content, $max_char, $more = '...')
 {
   if ((strlen($content) > $max_char) && ($espacio = strpos($content, " ", $max_char))) {
     $content = substr($content, 0, $espacio);
@@ -355,7 +360,7 @@ function limit_content($content, $max_char, $more = '...')
   return $content;
 }
 
-function get_taxonomies($tslug, $counttype = '')
+function fwbc_get_taxonomies($tslug, $counttype = '')
 {
   $where = " WHERE tv.machine_name = '" . $tslug . "'";
   if (strlen($counttype)) {
@@ -364,13 +369,13 @@ function get_taxonomies($tslug, $counttype = '')
   return db_query("SELECT td.tid, td.name, COUNT(ti.nid) as pcount FROM {taxonomy_term_data} td LEFT JOIN {taxonomy_vocabulary} tv ON tv.vid = td.vid LEFT JOIN {taxonomy_index} ti ON ti.tid = td.tid LEFT JOIN {node} n ON n.nid = ti.nid " . $where . " GROUP BY td.tid ORDER BY td.weight, td.name")->fetchAll();
 }
 
-function get_nid_by_mlid($mlid)
+function fwbc_get_nid_by_mlid($mlid)
 {
   $bookdata = db_query("SELECT nid FROM {book} WHERE mlid = '" . $mlid . "'")->fetchObject();
   return $bookdata->nid;
 }
 
-function get_mlid_by_nid($nid)
+function fwbc_get_mlid_by_nid($nid)
 {
   $bookdata = db_query("SELECT mlid FROM {book} WHERE nid = '" . $nid . "'")->fetchObject();
   return $bookdata->mlid;

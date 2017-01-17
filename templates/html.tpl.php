@@ -27,20 +27,22 @@
   <?php print $head; ?>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/favicon.ico">
-  <link rel="apple-touch-icon" sizes="57x57" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/favicon-16x16.png">
+  
+  <link rel="shortcut icon" href="<?php print '/' . $base_path . path_to_theme(); ?>/images/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="<?php print '/' . $base_path . path_to_theme(); ?>/images/icons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="<?php print '/' . $base_path . path_to_theme(); ?>/images/icons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="<?php print '/' . $base_path . path_to_theme(); ?>/images/icons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="<?php print '/' . $base_path . path_to_theme(); ?>/images/icons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="<?php print '/' . $base_path . path_to_theme(); ?>/images/icons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="<?php print '/' . $base_path . path_to_theme(); ?>/images/icons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="<?php print '/' . $base_path . path_to_theme(); ?>/images/icons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="<?php print '/' . $base_path . path_to_theme(); ?>/images/icons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="<?php print '/' . $base_path . path_to_theme(); ?>/images/icons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="<?php print '/' . $base_path . path_to_theme(); ?>/images/icons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="<?php print '/' . $base_path . path_to_theme(); ?>/images/icons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="<?php print '/' . $base_path . path_to_theme(); ?>/images/icons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="<?php print '/' . $base_path . path_to_theme(); ?>/images/icons/favicon-16x16.png" sizes="16x16">
+  
   <link rel="manifest" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="<?php print '/' . $base_path . path_to_theme(); ?>/icons/ms-icon-144x144.png">
@@ -51,90 +53,56 @@
 
 <body class="no-js <?php print $classes; ?>" <?php print $attributes; ?> style="padding:0px;">
 <?php print $page_top; ?>
-<div id="globalNavigation" class="header-top">
-  <div class="wrapper">
-    <span class="left"><a href="<?php echo home_url(); ?>">Home</a> <a
-        href="#content">Skip to content</a></span>
-		<span class="middle">
-			<strong>Language assistance:</strong>
-			<span id="languageSlider">
-				<?php
-                $lnid = theme_get_setting('fwbc_language_assitance_page');
-                if ($language_pages) {
-                  foreach ($language_pages as $lp_nid => $lp_data) { ?>
-                    <span><a
-                        href="<?php echo page_url('node/' . $lnid); ?>"><?php echo mb_substr($lp_data['title'], 0, 16); ?>
-                        ..</a></span>
-                  <?php }
-                } ?>
-			</span>
-		</span>
-
-    <div class="right"><?php the_menu('menu-top-menu'); ?></div>
-  </div>
-</div>
 <?php $site_name = variable_get('site_name'); ?>
-<div class="header">
-  <div id="search">
-    <?php $keys = @$_GET['keys'];
-    if (!strlen($keys)) {
-      $keys = 'Search this site...';
-    } ?>
-    <form action="<?php echo page_url('node/' . theme_get_setting('fwbc_search_page')); ?>" onsubmit="search_presubmit();">
-      <p>
-        <a href="<?php echo home_url(); ?>" title="<?php echo $site_name; ?>">
-          <img src="<?php theme_url(); ?>/images/fwbc_logo.png" alt="<?php echo $site_name; ?>" width="159" height="70"/>
-        </a>
-      </p>
-      <p>
+<a id="skipto" href="#content">Skip to content</a>
+<div class="wrapper-header">
+  <div class="header">
+    <div id="search">
+      <?php $keys = @$_GET['keys'];
+      if (!strlen($keys)) {
+        $keys = 'Search...';
+      } ?>
+      <form action="<?php echo fwbc_page_url('node/' . theme_get_setting('fwbc_search_page')); ?>" onsubmit="search_presubmit();">
         <input type="text" name="keys" id="searchBox" title="Search this site"
                 value="<?php echo $keys; ?>"
                 onfocus="if(this.value=='Search this site...'){this.value='';}"
                 onblur="if(this.value==''){this.value='Search this site...';}"/>
         <input type="submit" value="Search" id="searchBtn"/>
-      </p>
-    </form>
+      </form>
+    </div>
+    <div id="logo">
+      <a href="<?php echo fwbc_home_url(); ?>" title="<?php echo $site_name; ?>">
+        <svg width="295" height="89">
+          <image xlink:href="<?php fwbc_theme_url(); ?>/images/branding/crest.png" src="<?php fwbc_theme_url(); ?>/images/branding/crest.png" srcset="<?php fwbc_theme_url(); ?>/images/branding/crest.png 1x, <?php fwbc_theme_url(); ?>/images/branding/crest.png 2x, <?php fwbc_theme_url(); ?>/images/branding/crest.png 3x, <?php fwbc_theme_url(); ?>/images/branding/crest.png 4x" width="295" height="92" alt="<?php echo $site_name; ?>" width="330" height="97"/>
+        </svg>
+      </a>
+    </div>
   </div>
-  <div id="logo">
-    <a href="<?php echo home_url(); ?>" title="<?php echo $site_name; ?>">
-      <svg width="295" height="92">
-        <image xlink:href="<?php theme_url(); ?>/images/govt_logo.svg" src="<?php theme_url(); ?>/images/govt_logo.png" width="295" height="92" alt="<?php echo $site_name; ?>" width="330" height="97"/>
-      </svg>
-    </a>
-  </div>
+  <?php fwbc_the_main_menu(); ?>
+</div>
+<div class="region region-top-information-banner">
+  <?php print render(block_get_blocks_by_region('top_information_banner')); ?>
 </div>
 <div class="content">
-  <?php the_main_menu(); ?>
   <a name="content"></a>
   <?php print $page; ?>
   <div class="clear"></div>
+</div>
+
+<div class="wrapper-footer">
   <div id="footer">
+  <!--  <div class="wideBox">-->
+    <?php //fwbc_the_block(2, FALSE); ?>
+  <!--  </div>-->
     <div class="wideBox">
-      <div class="corner"></div>
-      <?php the_block(2, FALSE); ?>
-    </div>
-    <div class="wideBox">
-      <map id="footerlogos" name="footerlogos">
-        <area shape="rect" alt="Information Publication Scheme"
-              title="Information Publication Scheme" coords="2,1,134,50"
-              href="/information-publication-scheme"/>
-        <area shape="rect" alt="Disclosure Log" title="Disclosure Log"
-              coords="139,4,263,51" href="/disclosure-log"/>
-      </map>
-      <img class="ips" usemap="#footerlogos"
-           src="<?php theme_url(); ?>/images/ips_fdl_logos.jpg"
-           alt="Information Publication Scheme, FOI Disclosure Log" width="271"
-           height="53"/>
-      <?php for ($fm = 1; $fm <= 5; $fm++) {
-        the_footer_menu('menu-site-footer-menu-' . $fm, array('class' => 'footer-menu'));
-      } ?>
-      <div class="clear"></div>
-    </div>
-    <div class="wideBox">
-      <div class="footer-bottom"><?php the_block(1, FALSE); ?></div>
-      <div
-        class="footer-bottom"><?php the_menu('menu-site-bottom-menu', array('class' => 'bottom-menu'), '&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;'); ?></div>
-      <div class="clear"></div>
+      <div class="wideBox-half left">
+        <div class="footer-bottom"><?php fwbc_the_block(0, FALSE); ?></div>
+        <div class="footer-bottom"><?php fwbc_the_menu('menu-site-bottom-menu', array('class' => 'bottom-menu')); ?></div>
+      </div>
+      <div class="wideBox-half right">
+        <div class="footer-bottom"><?php fwbc_the_menu('menu-site-bottom-right-menu', array('class' => 'bottom-menu')); ?></div>
+        <p align="right"><a href="/node/123">Access to information</a></p>
+      </div>
     </div>
   </div>
 </div>

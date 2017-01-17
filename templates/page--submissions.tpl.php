@@ -7,13 +7,13 @@ $status = $_GET['status'];
 $state = $_GET['state'];
 $abreach = $_GET['abreach'];
 ?>
+<div>
 	<?php include('block-breadcrumb.tpl.php'); ?>
 	<?php include('block-left-sidebar.tpl.php'); ?>
 	<div class="content-box">
 		<div class="headingBox">
-			<div class="corner"></div>
 			<h1><?php echo $title; ?></h1>
-			<img src="<?php theme_url(); ?>/images/page_image_4.jpg" alt="<?php echo $title; ?>" width="685" height="158" />
+			<img src="<?php fwbc_theme_url(); ?>/images/page_image_4.jpg" alt="<?php echo $title; ?>" width="685" height="158" />
 		</div>
 		<div id="leftContent" class="legal-cases-list">
 			<div class="contentBox wide">
@@ -33,18 +33,18 @@ $abreach = $_GET['abreach'];
 					<h3><label for="key-search">Keyword Search</label></h3>
 					<p><input id="key-search" type="text" name="sw" value="<?php echo $sw; ?>"></p>
 					<?php
-					$filter_statuses = get_taxonomies('status_submissions');
+					$filter_statuses = fwbc_get_taxonomies('status_submissions');
 					if ($filter_statuses) {
 					?>
 					<h3>Status</h3>
 					<ul>
 						<li>
-							<input id="status-all" type="radio" name="status-all" class="filter-all" rel="fstatus" value="true"<?php if ($status == '' || $status == 'All') { echo ' CHECKED'; } ?>> 
+							<input id="status-all" type="radio" name="status-all" class="filter-all" rel="fstatus" value="true"<?php if ($status == '' || $status == 'All') { echo ' CHECKED'; } ?>>
 							<label for="status-all">All</label>
 						</li>
 						<?php foreach ($filter_statuses as $filter_status) { $ch = ''; if ($filter_status->tid == $status) { $ch = ' CHECKED'; } ?>
 							<li>
-								<input id="<?php $str_id = str_replace(" ", "-", $filter_status->name); echo strtolower($str_id); ?>" type="radio" name="status" value="<?php echo $filter_status->tid; ?>" class="filter-item fstatus"<?php echo $ch; ?>> 
+								<input id="<?php $str_id = str_replace(" ", "-", $filter_status->name); echo strtolower($str_id); ?>" type="radio" name="status" value="<?php echo $filter_status->tid; ?>" class="filter-item fstatus"<?php echo $ch; ?>>
 								<label for="<?php $str_id = str_replace(" ", "-", $filter_status->name); echo strtolower($str_id); ?>"><?php echo $filter_status->name; ?></label>
 							</li>
 						<?php } ?>
@@ -52,7 +52,7 @@ $abreach = $_GET['abreach'];
 					<?php } ?>
 
 					<?php
-					$filter_states = get_taxonomies('state_submissions', 'submission');
+					$filter_states = fwbc_get_taxonomies('state_submissions', 'submission');
 					if ($filter_states) {
 						$state_all = 0;
 						foreach ($filter_states as $filter_state) {
@@ -62,7 +62,7 @@ $abreach = $_GET['abreach'];
 					<h3>State</h3>
 					<ul>
 						<li>
-							<input id="state-all" name="stall" type="checkbox" class="filter-all" rel="fstate" value="true"<?php if (!$state) { echo ' CHECKED'; } ?>> 
+							<input id="state-all" name="stall" type="checkbox" class="filter-all" rel="fstate" value="true"<?php if (!$state) { echo ' CHECKED'; } ?>>
 							<label for="state-all">All (<?php echo $state_all; ?>)</label>
 						</li>
 						<?php foreach ($filter_states as $filter_state) {
@@ -78,7 +78,7 @@ $abreach = $_GET['abreach'];
 					<?php } ?>
 
 					<?php
-					$filter_abreaches = get_taxonomies('alleged_breach_submissions', 'submission');
+					$filter_abreaches = fwbc_get_taxonomies('alleged_breach_submissions', 'submission');
 					if ($filter_abreaches) {
 						$abreach_all = 0;
 						foreach ($filter_abreaches as $filter_abreach) {
@@ -88,7 +88,7 @@ $abreach = $_GET['abreach'];
 					<h3>Alleged breach</h3>
 					<ul>
 						<li>
-							<input id="breach-all" name="alall" type="checkbox" class="filter-all" rel="fabreach" value="true"<?php if (!$abreach) { echo ' CHECKED'; } ?>> 
+							<input id="breach-all" name="alall" type="checkbox" class="filter-all" rel="fabreach" value="true"<?php if (!$abreach) { echo ' CHECKED'; } ?>>
 							<label for="breach-all">All (<?php echo $abreach_all; ?>)</label>
 						</li>
 						<?php foreach ($filter_abreaches as $filter_abreach) {
@@ -110,3 +110,4 @@ $abreach = $_GET['abreach'];
 			</div>
 		</div>
 	</div>
+</div>

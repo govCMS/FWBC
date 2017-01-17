@@ -1,0 +1,416 @@
+@media only screen and (max-width: 650px) {
+
+  .region-page-top, #mainMenu, #footer, .wrapper, .header, .content, .wideBox, .content > div, .content-box, .box {
+    float:left;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  #fwbcOnSite.box {
+    background-size: 250px;
+  }
+  .box {
+    width: 100% !important;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-sizing: border-box;
+  }
+
+  #subNav {
+    max-width: 100%;
+  }
+
+  #subNav ul li:not(.selected) {
+    display: none;
+  }
+
+  #subNav ul li.selected:not(.parent) ul li {
+    display: block;
+  }
+
+  #subNav ul.top-level-selected li {
+    display: block;
+  }
+
+  #subNav,
+  .contentBox h1 {
+    margin-top: 2em !important;
+  }
+
+  .contact-form .webform-client-form > div > .form-item > label {
+    width: auto !important;
+    padding: 6px 10px 10px 0;
+  }
+
+  .contact-form .webform-client-form select {
+    width: 260px !important;
+  }
+
+  table td {
+    font-size: 10px !important;
+  }
+
+  table th {
+    min-width: 0px !important;
+  }
+
+  .legal-cases-list .content-block {
+    float: left;
+    /*width: 300px !important;*/
+  }
+
+  #mainMenu {
+    display: inline-block;
+    width: 100%;
+  }
+
+  #mainMenu li ul {
+    display: none !important;
+  }
+
+  #mainMenu li#home {
+    max-width: none;
+  }
+
+  #mainMenu li#home > div > a {
+    border: none;
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #FFFFFF;
+  }
+
+  body {
+    background: #F0EFEA;
+    display: inline;
+  }
+
+  #subNav {
+    float: none;
+  }
+
+  #slideshow, #breadCrumbs, .refineSearch {
+    display: none;
+  }
+
+  #rightContent, #leftContent {
+    padding: 0;
+    margin: 0;
+    width: auto;
+  }
+
+  .wrapper, .header, .content, .box, #rightContent .box, #subNav, .headingBox, #newsletterContent {
+    width: 100%;
+    text-align: left;
+    margin: auto;
+    margin-bottom: 10px;
+    min-height: 0;
+  }
+
+  #newsletterContent {
+    padding: 7px;
+  }
+
+  .newsletterStories {
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  #newsletterContent .wideBox {
+    display: none;
+  }
+
+  .newsletterHeadingBox, .inThisIssue {
+    width: auto;
+    margin-left: 0;
+  }
+
+  .headingBox {
+    padding: 0 8px;
+  }
+
+  .headingBox img, .headingBox h1 {
+    margin-left: -8px;
+  }
+
+  .contentBox, .contentBox.wide {
+    width: auto;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+
+  #sign-up-newsletter-page {
+    float: none;
+  }
+
+  .box {
+    padding-right: 7px;
+  }
+
+  #globalNavigation {
+    overflow: hidden;
+  }
+
+  .right a {
+    margin-left: 0px;
+    margin-right: 3px;
+    margin-bottom: 10px;
+  }
+
+  #globalNavigation .left, #search img {
+    display: none;
+  }
+
+  #globalNavigation .right {
+    float: none;
+  }
+
+  .header {
+    position: relative;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+
+  #search {
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    top: auto;
+  }
+
+  #search form {
+    width: 50%;
+    height: 30px;
+    margin: auto;
+    display: block;
+  }
+
+  #search form input {
+    position: relative;
+  }
+
+  #searchBox {
+    width: 100%;
+  }
+
+  #searchBtn {
+    top: -23px;
+    float: right;
+  }
+
+  #search p {
+    padding: 0;
+    margin: 0;
+  }
+
+  #mainMenu {
+    margin-bottom: 10px;
+  }
+
+  #mainMenu, #mainMenu li {
+    height: auto !important;
+    padding: 0;
+    background: none;
+    display: block;
+  }
+
+  #mainMenu li a {
+    height: auto !important;
+    padding: 12px 0 !important;
+    display: block;
+    font-size: 14px;
+    width: 100% !important;
+    text-align: center;
+    background: #003956;
+    border-bottom: 1px solid #FFFFFF;
+  }
+
+  #logo {
+    padding: 0 15px 5px 15px;
+    text-align: center;
+  }
+
+  #logo img {
+    width: auto;
+    height: 80px;
+  }
+
+  #promoArea.box, #promoArea img {
+    width: 300px !important;
+    height: auto !important;
+  }
+
+  ul#tabs li a {
+    padding: 8px 10px;
+  }
+
+  ul#tabs li a.selected {
+    padding: 8px 10px;
+  }
+
+  /*--------------------------*/
+  /*
+  #footer
+  {
+   display: none;
+  }*/
+
+  #footer {
+    background: #00395C;
+    display: table;
+  }
+
+  #footer .wideBox {
+    padding: 1px 5px 0;
+    margin: auto;
+  }
+
+  #footer .wideBox-half {
+    width: 100%;
+    float: none;
+  }
+
+  #footer .wideBox:nth-child(2) {
+    padding-bottom: 76px;
+  }
+
+  #footer .footer-bottom {
+    float: none;
+  }
+
+  .refineSearch {
+    display: block;
+    float: none;
+    width: auto;
+    margin: 0;
+    padding: 15px 10px;
+    clear: both;
+  }
+
+  .refineSearch p:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  /*-------------------------*/
+  .page-node-16 .content-box {
+    width: 100%;
+  }
+
+  #newsletterContent .box {
+    width: 297px;
+    float: none;
+  }
+
+  .contact-form .webform-client-form #edit-actions {
+    padding: 10px 0 10px 0;
+  }
+
+  .contact-form .webform-client-form > div > .form-item > div {
+    width: 100%;
+  }
+
+  #newsletterContent .newsletterStories .box {
+    margin-right: 0;
+  }
+
+  .mobile-display,
+  .mobile-display#globalNavigation .middle {
+    display: block;
+  }
+
+  #globalNavigation .wrapper {
+    width: auto;
+    margin: 0 0 10px;
+    padding: 0 5px;
+  }
+
+  #globalNavigation .middle {
+    left: 0;
+    padding: 6px 0 0;
+    width: 100%;
+    top: 32px;
+    height: 32px;
+    background: #30373e url(../images/dark_gradient.jpg) repeat-x scroll;
+  }
+
+  #globalNavigation {
+    height: 70px;
+  }
+
+  #globalNavigation .wrapper:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  #globalNavigation .middle strong {
+    position: relative;
+    z-index: 100;
+    float: left;
+    margin: 7px 4px 0 8px;
+  }
+
+  #languageSlider {
+    position: relative;
+    margin: 0;
+    left: 0;
+    width: 170px !important;
+    float: left;
+  }
+
+  .contentBox {
+    width: auto;
+    margin-left: 0;
+    float: none;
+  }
+
+  .contentBox iframe {
+    max-width: 100%;
+    width: auto !important;
+  }
+
+  #newsletterContent {
+    padding: 0;
+    width: 100%;
+  }
+
+  .box .buttons {
+    padding-right: 0;
+  }
+
+  .box p,
+  .box h3 {
+    padding-right: 0;
+  }
+
+  .home-left-container {
+    width: 100%;
+  }
+
+  div.region-top-information-banner > * {
+    padding: 0 15px;
+  }
+
+  /* Nicer admin tabs */
+
+  .tabs ul.tabs li {
+    width: 100%;
+    float: left;
+  }
+
+  ul.primary li a,
+  ul.primary li.active a {
+    border: 0;
+    display: block;
+  }
+
+  ul.primary li a:hover,
+  ul.primary li a:focus {
+    border-width: 0;
+    color: #D03344;
+  }
+
+}

@@ -6,20 +6,17 @@ $sw = trim($_GET['sw']);
 $state = $_GET['state'];
 $union = $_GET['union'];
 ?>
-	<?php include('block-breadcrumb.tpl.php'); ?>
+<?php if (isset($page['top_information_banner']) && !empty($page['top_information_banner'])) {
+  print render($page['top_information_banner']);
+} ?>
+<div>
+  <?php include('block-breadcrumb.tpl.php'); ?>
 	<?php include('block-left-sidebar.tpl.php'); ?>
 	<div class="content-box">
-		<div id="annocement" style="border: 2px solid #3a6265; padding: 1em; margin: 15px;">
-			<h2 style="text-align: center; margin-bottom: 1em;">IMPORTANT</h2><p>On the 1st of December 2016 the <em>Building and Construction Industry (Improving Productivity) Bill 2013</em> and the <em>Building and Construction Industry (Consequential and Transitional Provisions) Bill 2013</em> received Royal Assent.</p><p>As a result, the Office of the Fair Work Building Industry Inspectorate (known as Fair Work Building and Construction) will cease operations on 1 December 2016 and the agency will transition to the Australian Building and Construction Commission.</p><p><strong>The information on this website is currently being reviewed and checked for currency under the new legislation. Updated information will appear on the new ABCC website shortly. Until then, for advice and assistance, you can call the ABCC hotline on 1800 003 338 or contact&nbsp;<a href="mailto:enquiry@abcc.gov.au">enquiry@abcc.gov.au</a></strong></p><p>A new website will be available at&nbsp;<a href="http://www.abcc.gov.au/">www.abcc.gov.au</a>&nbsp;as soon as possible.</p><p>The material on this website is for general information only. You should seek legal advice in relation to your particular circumstances.</p>
-		</div>
-		<div class="headingBox">
-			<div class="corner"></div>
-			<h1><?php echo $title; ?></h1>
-			<img src="<?php theme_url(); ?>/images/page_image_4.jpg" alt="<?php echo $title; ?>" width="685" height="158" />
-		</div>
 		<div id="leftContent" class="legal-cases-list">
 			<div class="contentBox wide">
 				<div class="content-block">
+          <h1><?php echo $title; ?></h1>
 					<?php if ($tabs): ?>
 					  <div class="tabs">
 						<?php print render($tabs); ?>
@@ -45,7 +42,7 @@ $union = $_GET['union'];
 						<h3><label for="key-search">Keyword Search</label></h3>
 						<p><input id="key-search" type="text" name="sw" value="<?php echo $sw; ?>"></p>
 						<?php
-						$filter_states = get_taxonomies('state_no_permit', 'no_permit');
+						$filter_states = fwbc_get_taxonomies('state_no_permit', 'no_permit');
 						if ($filter_states) {
 							$state_all = 0;
 							foreach ($filter_states as $filter_state) {
@@ -55,7 +52,7 @@ $union = $_GET['union'];
 						<h3>State</h3>
 						<ul>
 							<li>
-								<input id="state_all" name="stall" type="checkbox" class="filter-all" rel="fstate" value="true"<?php if (!$state) { echo ' CHECKED'; } ?>> 
+								<input id="state_all" name="stall" type="checkbox" class="filter-all" rel="fstate" value="true"<?php if (!$state) { echo ' CHECKED'; } ?>>
 								<label for="state_all">All (<?php echo $state_all; ?>)</label>
 							</li>
 							<?php foreach ($filter_states as $filter_state) {
@@ -63,7 +60,7 @@ $union = $_GET['union'];
 								$dz = ''; if ($filter_state->pcount == 0) { $dz = ' disabled'; }
 							?>
 							<li>
-								<input id="<?php $str_id = str_replace(" ", "-", $filter_state->name); echo strtolower($str_id); ?>" name="state[]" type="checkbox" value="<?php echo $filter_state->tid; ?>" class="filter-item fstate"<?php echo $ch.$dz; ?>> 
+								<input id="<?php $str_id = str_replace(" ", "-", $filter_state->name); echo strtolower($str_id); ?>" name="state[]" type="checkbox" value="<?php echo $filter_state->tid; ?>" class="filter-item fstate"<?php echo $ch.$dz; ?>>
 								<label for="<?php $str_id = str_replace(" ", "-", $filter_state->name); echo strtolower($str_id); ?>"><?php echo $filter_state->name; ?> (<?php echo $filter_state->pcount; ?>)</label>
 							</li>
 							<?php } ?>
@@ -71,7 +68,7 @@ $union = $_GET['union'];
 						<?php } ?>
 
 						<?php
-						$filter_unions = get_taxonomies('union_no_permit', 'no_permit');
+						$filter_unions = fwbc_get_taxonomies('union_no_permit', 'no_permit');
 						if ($filter_unions) {
 							$union_all = 0;
 							foreach ($filter_unions as $filter_union) {
@@ -89,7 +86,7 @@ $union = $_GET['union'];
 								$dz = ''; if ($filter_union->pcount == 0) { $dz = ' disabled'; }
 							?>
 							<li>
-								<input  id="<?php $str_id = str_replace(" ", "-", $filter_union->name); echo strtolower($str_id); ?>" name="union[]" type="checkbox" value="<?php echo $filter_union->tid; ?>" class="filter-item funion"<?php echo $ch.$dz; ?>> 
+								<input  id="<?php $str_id = str_replace(" ", "-", $filter_union->name); echo strtolower($str_id); ?>" name="union[]" type="checkbox" value="<?php echo $filter_union->tid; ?>" class="filter-item funion"<?php echo $ch.$dz; ?>>
 								<label for="<?php $str_id = str_replace(" ", "-", $filter_union->name); echo strtolower($str_id); ?>"><?php echo $filter_union->name; ?> (<?php echo $filter_union->pcount; ?>)</label>
 							</li>
 							<?php } ?>
@@ -103,3 +100,4 @@ $union = $_GET['union'];
 			</div>
 		</div>
 	</div>
+</div>
