@@ -512,8 +512,8 @@ a#skipto:active {
 #mainMenu li:hover > a,
 #mainMenu li > a:focus,
 #mainMenu li > a:active {
-    background: #DEDEDE;
-    color: #000000;
+    background: #556670;
+    color: #FFFFFF;
 }
 
 #mainMenu li .current {
@@ -527,7 +527,7 @@ a#skipto:active {
     font-size: 12px;
     z-index: 200;
     border: none;
-    background: #bdbebe;
+    background: #DEDEDE;
     padding: 10px 15px;
     height: auto;
     line-height: 16px;
