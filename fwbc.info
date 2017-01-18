@@ -1,6 +1,6 @@
 screenshot  = screenshot.png
-name = FWBC
-description = FWBC theme.
+name = ABCC
+description = ABCC theme (based on old FWBC theme)
 core = 7.x
 engine = phptemplate
 
