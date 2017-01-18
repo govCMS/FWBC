@@ -71,10 +71,8 @@
       </form>
     </div>
     <div id="logo">
-      <a href="<?php echo fwbc_home_url(); ?>" title="<?php echo $site_name; ?>">
-        <svg width="295" height="89">
-          <image xlink:href="<?php fwbc_theme_url(); ?>/images/branding/crest.png" src="<?php fwbc_theme_url(); ?>/images/branding/crest.png" srcset="<?php fwbc_theme_url(); ?>/images/branding/crest.png 1x, <?php fwbc_theme_url(); ?>/images/branding/crest.png 2x, <?php fwbc_theme_url(); ?>/images/branding/crest.png 3x, <?php fwbc_theme_url(); ?>/images/branding/crest.png 4x" width="295" height="92" alt="<?php echo $site_name; ?>" width="330" height="97"/>
-        </svg>
+      <a href="<?php echo fwbc_home_url(); ?>" title="Go to the <?php echo $site_name; ?> homepage">
+        <img src="<?php fwbc_theme_url(); ?>/images/branding/abcc-crest-on-003956.gif" srcset="<?php fwbc_theme_url(); ?>/images/branding/abcc-crest-on-003956.gif 1x, <?php fwbc_theme_url(); ?>/images/branding/abcc-crest-on-003956_2x.gif 2x, <?php fwbc_theme_url(); ?>/images/branding/crest.png 3x, <?php fwbc_theme_url(); ?>/images/branding/crest.png 4x" width="295" height="92" alt="Go to the <?php echo $site_name; ?> homepage" />
       </a>
     </div>
   </div>
