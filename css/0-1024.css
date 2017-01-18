@@ -1,9 +1,5 @@
 @media only screen and (max-width: 1024px) {
 
-  body {
-    display: inline;
-  }
-
   .region-page-top, #mainMenu, #footer, .wrapper, .header, .content, .wideBox {
     float:left;
     max-width: 100vw;

@@ -270,7 +270,7 @@ p.category {
 }
 
 .content {
-    background-image: url("../images/background-lg.jpg");
+    background-image: url("../images/background-md.jpg");
     background-size: cover;
     background-attachment: fixed;
     max-width: none;
@@ -555,11 +555,13 @@ a#skipto:active {
 
 .wideBox {
     margin:auto;
-    background: transparent;
     position: relative;
-    padding: 10px;
     max-width:960px;
     zoom: 1;
+}
+.content .wideBox {
+  padding: 15px !important;
+  background: rgba(255,255,255,0.9);
 }
 .wideBox .wideBox-half {
   background: transparent;
@@ -1862,8 +1864,6 @@ img.floatRight, .imageCaption.floatRight {
 
 .newsletterStories {
     width: 690px;
-    margin-bottom: 15px;
-
 }
 
 #newsletterContent .box {

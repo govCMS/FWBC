@@ -6,6 +6,10 @@
     width: 100%;
   }
 
+  .content {
+    background-image: url("../images/background-vert.jpg");
+  }
+
   #fwbcOnSite.box {
     background-size: 250px;
   }
@@ -82,7 +86,6 @@
 
   body {
     background: #F0EFEA;
-    display: inline;
   }
 
   #subNav {
