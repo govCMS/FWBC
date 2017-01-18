@@ -761,6 +761,17 @@ a#skipto:active {
     float: left;
     max-width: 700px;
 }
+.page-node-10 .contentBox.wide {
+  margin: auto;
+  width: 100%;
+  float: none;
+  max-width: 950px;
+}
+.page-node-10 #leftContent {
+  width: 100%;
+  max-width: none;
+  display: block;
+}
 
 .page-user .contentBox{
   margin-left: 0;
@@ -1786,6 +1797,8 @@ img.floatRight, .imageCaption.floatRight {
     overflow: hidden;
     border: none;
     position: relative;
+    background: #ce3549;
+    height: 125px;
 }
 
 .newsletterHeadingBox .social {
@@ -1834,8 +1847,7 @@ img.floatRight, .imageCaption.floatRight {
 
 #newsletterContent {
     float: left;
-    width: 667px;
-    padding: 15px;
+    padding-left: 15px;
     overflow: visible;
 }
 
