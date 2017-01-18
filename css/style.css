@@ -25,6 +25,10 @@ footer, header, hgroup, menu, nav, section {
     display: block;
 }
 
+html {
+  background: #003956;
+}
+
 body {
     line-height: 1;
 }
@@ -99,8 +103,11 @@ img.newsThumb {
 }
 
 .breadcrumbs-list {
-    width: 792px;
+    max-width: 792px;
     overflow: hidden;
+    height: 21px;
+    line-height: 21px;
+    display: inline-block;
 }
 
 .breadcrumbs-list-links {
@@ -114,7 +121,7 @@ img.newsThumb {
 
 .breadcrumbs-list-title {
     float: left;
-    padding: 2px 5px 0 0;
+    padding: 0 5px 0 0;
 }
 
 a {
@@ -256,6 +263,10 @@ p.category {
 }
 
 #mainMenu {
+}
+
+#block-system-main {
+  background: rgba(255,255,255,0.9);
 }
 
 .content {
@@ -1285,31 +1296,38 @@ a.icon {
     background-repeat: no-repeat;
     background-position: center right;
     background-size: 10px 10px;
-    padding: 0 12px 2px 0;
+    padding: 0 12px 0 0;
+    height: 21px;
+    line-height: 21px;
 }
 
 #pageTools {
-    position: absolute;
-    display: block;
-    padding: 3px 9px 3px 11px;
-    width: 200px;
-    height: 30px;
-    top: 3px;
+    display: table;
+    float: right;
+    width: 100px;
+    height: 21px;
+    top: 0;
     right: 0;
     text-align: right;
     z-index: 90;
 }
 
 #pageTools a, .addthis_toolbox, .addthis_toolbox a {
-    display: inline-block;
+    display: table-cell;
     padding: 0;
     background: none;
     margin-right: 0;
+    height: 21px;
+    line-height: 21px;
+}
+
+#pageTools a img, .addthis_toolbox, .addthis_toolbox a img {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .addthis_toolbox {
   margin: 0 5px 0 0;
-  vertical-align: middle;
 }
 
 .addthis_toolbox > .addthis_button_compact > .at-icon-wrapper {
@@ -1344,10 +1362,8 @@ span.hidden {
 
 a#bigTextIcon {
     width: 19px;
-    height: 20px;
-    display: inline-block;
+    height: 21px;
     overflow: hidden;
-    margin-bottom: -2px;
 }
 
 a:hover#bigTextIcon, a#bigTextIcon.selected {
@@ -1355,10 +1371,8 @@ a:hover#bigTextIcon, a#bigTextIcon.selected {
 
 a#mediumTextIcon {
     width: 18px;
-    height: 20px;
-    display: inline-block;
+    height: 21px;
     overflow: hidden;
-    margin-bottom: -2px;
 }
 
 a:hover#mediumTextIcon, a#mediumTextIcon.selected {
@@ -1366,27 +1380,23 @@ a:hover#mediumTextIcon, a#mediumTextIcon.selected {
 
 a#smallTextIcon {
     width: 14px;
-    height: 20px;
-    display: inline-block;
+    height: 21px;
     overflow: hidden;
-    margin-bottom: -2px;
 }
 
 a:hover#smallTextIcon, a#smallTextIcon.selected {
 }
 
 a#shareBtn {
-    width: 16px;
-    height: 16px;
-    display: inline-block;
+    width: 21px;
+    height: 21px;
     overflow: hidden;
     margin-right: 5px;
 }
 
 a#printBtn {
-    width: 16px;
-    height: 16px;
-    display: inline-block;
+    width: 21px;
+    height: 21px;
     overflow: hidden;
     margin-right: 5px;
 }
@@ -1820,7 +1830,6 @@ img.floatRight, .imageCaption.floatRight {
     padding: 8px 10px 8px 37px !important;
     font-size: 14px;
     margin: 0 !important;
-    background: url(../images/bullet.png) no-repeat 15px 9px !important;
 }
 
 #newsletterContent {
@@ -1887,8 +1896,9 @@ img.floatRight, .imageCaption.floatRight {
     height: 35px;
     padding: 0 10px;
     line-height: 33px;
-    background: url("../images/gradients.jpg") repeat-x 0 0;
+    background: #003956;
     color: #fff;
+    border: 1px solid transparent;
     text-align: center;
     text-transform: uppercase;
     font-size: 15px;
@@ -1896,17 +1906,19 @@ img.floatRight, .imageCaption.floatRight {
 }
 
 #newsletterContent .box .buttons a.top {
-    background: url(../images/gradient-orange.jpg) 0 0 repeat-x;
+    background: #D03344;
 }
 
 #newsletterContent .box .buttons a.more {
-    width: 219px;
+    width: 218px;
 }
 
 #newsletterContent .box .buttons a:hover,
 #newsletterContent .box .buttons a:focus,
 #newsletterContent .box .buttons a:active {
-    background: url("../images/gradients.jpg") 0 -38px repeat-x;
+    background: #FFFFFF;
+    color: #003956;
+    border: 1px solid #003956;
     text-decoration: none;
 }
 
@@ -2057,7 +2069,6 @@ a.arrow {
 .view-homepage-tiles ul li {
     padding: 3px 7px 7px 20px;
     margin-left: 5px;
-    background: url(../images/bullet.png) no-repeat 0 3px;
     line-height: 18px;
 }
 
