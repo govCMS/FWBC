@@ -1,6 +1,6 @@
 <?php
 /*
- * Legal Cases list template
+ * FWBC Legal Cases list template
 */
 $sw = trim($_GET['sw']);
 $status = $_GET['status'];
@@ -22,7 +22,7 @@ $abreach = $_GET['abreach'];
 					  </div>
 					<?php endif; ?>
 					<?php echo render($page['content']); ?>
-					<?php echo views_embed_view('abcc_legal_cases_new'); ?>
+					<?php echo views_embed_view('legal_cases'); ?>
 					<br /><br />
 					<h2>Need more information about legal cases?</h2><p>For further information or assistance contact the FWBC Hotline on <strong>1800 003 338.</strong></p>
 				</div>
