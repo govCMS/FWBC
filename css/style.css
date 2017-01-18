@@ -67,7 +67,6 @@ body {
     font-family: muli-regular, Georgia, "Times New Roman", Times, serif;
     font-size: 12px;
     color: #373f46;
-    min-width: 960px;
 }
 .wrapper-header, .wrapper-footer {
   width: 100%;
@@ -177,7 +176,7 @@ h1 {
     text-transform: uppercase;
     color: #003956;
     margin-bottom: 15px;
-    font-family: 'montserrat-bold', sans-serif, Arial;
+    font-family: 'montserrat-bold', Helvetica, Arial, sans-serif;
 }
 
 h2 {
@@ -186,7 +185,7 @@ h2 {
     font-size: 15px;
     line-height: 20px;
     font-weight: normal;
-    font-family: 'montserrat-bold', sans-serif, Arial;
+    font-family: 'montserrat-bold', Helvetica, Arial, sans-serif;
 }
 
 .contentBox h2 {
@@ -198,7 +197,7 @@ h3 {
     font-size: 13px;
     margin-bottom: 10px;
     line-height: 18px;
-    font-family: 'montserrat-regular';
+    font-family: 'montserrat-regular', Helvetica, Arial, sans-serif;
 }
 
 h4 {
@@ -207,7 +206,7 @@ h4 {
     margin-bottom: 10px;
     line-height: 18px;
     font-weight: normal;
-    font-family: 'montserrat-regular';
+    font-family: 'montserrat-regular', Helvetica, Arial, sans-serif;
 }
 
 h5 {
@@ -216,7 +215,7 @@ h5 {
     font-size: 12px;
     margin-bottom: 10px;
     line-height: 18px;
-  font-family: 'montserrat-regular';
+  font-family: 'montserrat-regular', Helvetica, Arial, sans-serif;
 }
 
 h5 span {
@@ -224,7 +223,7 @@ h5 span {
 }
 
 h6 {
-  font-family: 'montserrat-regular';
+  font-family: 'montserrat-regular', Helvetica, Arial, sans-serif;
     line-height: 18px;
 }
 
@@ -241,7 +240,7 @@ p.introText {
     font-size: 14px;
     margin-bottom: 10px;
     line-height: 22px;
-    font-family: 'muli-bold', Georgia, "Times New Roman", Times, serif;
+    font-family: 'muli-bold', Helvetica, Arial, sans-serif;
 }
 
 .clear {
@@ -327,7 +326,7 @@ p.category {
     border: none;
     font-size: 12px;
     margin-left: 5px;
-    font-family: muli-regular, Georgia, "Times New Roman", Times, serif;
+    font-family: muli-regular, Helvetica, Arial, sans-serif;
 }
 
 #globalNavigation ul {
@@ -450,11 +449,12 @@ a#skipto:active {
 #mainMenu {
     background: #003956;
     padding: 0;
-    font-family: muli-regular, Georgia, "Times New Roman", Times, serif;
+    font-family: muli-regular, Helvetica, Arial, sans-serif;
     z-index: 200;
     position: relative;
     display: table;
     width: 100%;
+    margin-bottom: 0;
 }
 
 #mainMenu li {
@@ -507,7 +507,7 @@ a#skipto:active {
     border-right: 1px solid #003956;
     border-left: 1px solid #003956;
     background: #003956;
-    font-family: 'muli-bold', Georgia, "Times New Roman", Times, serif;
+    font-family: 'muli-bold', Helvetica, Arial, sans-serif;
     text-align: center;
 }
 
@@ -534,7 +534,7 @@ a#skipto:active {
 #mainMenu li ul li a {
     text-align: left;
     width: 200px;
-    font-family: muli-regular, Georgia, "Times New Roman", Times, serif;
+    font-family: muli-regular, Helvetica, Arial, sans-serif;
     font-size: 12px;
     z-index: 200;
     border: none;
@@ -729,7 +729,7 @@ a#skipto:active {
 
 #subNav h2 {
     padding-bottom: 10px;
-    font-family: 'montserrat-bold', sans-serif, Arial;
+    font-family: 'montserrat-bold', Helvetica, Arial, sans-serif;
     font-weight: normal;
     background: rgba(255,255,255,0.7);
 }
@@ -1284,7 +1284,6 @@ a.icon {
   background-size: 28px 28px;
   background-position: center;
   background-repeat: no-repeat;
-  margin-bottom: 10px;
 }
 #mainMenu li#home > div > a:hover,
 #mainMenu li#home > div > a:focus {
@@ -1536,7 +1535,7 @@ a#printBtn {
 .refineSearch h2 {
     margin-bottom: 5px;
     font-weight: normal;
-    font-family: 'montserrat-bold', sans-serif, Arial;
+    font-family: 'montserrat-bold', Helvetica, Arial, sans-serif;
 }
 
 .refineSearch input {
@@ -1814,7 +1813,6 @@ img.floatRight, .imageCaption.floatRight {
 }
 
 .inThisIssue {
-    background: #fff url(../images/newsletter_corner.jpg) no-repeat top right;
     padding: 0 !important;
     margin: 0 !important;
 }
@@ -1858,7 +1856,7 @@ img.floatRight, .imageCaption.floatRight {
     top: 23px;
     left: 17px;
     color: #f59331;
-    font: normal 43px/42px "montserrat-bold", serif;
+    font: normal 43px/42px "montserrat-bold", Helvetica, Arial, sans-serif;
     letter-spacing: -1px;
 }
 
@@ -1966,14 +1964,14 @@ img.floatRight, .imageCaption.floatRight {
 .home-slide-item h2 {
     font-size: 44px;
     line-height: 46px;
-    font-family: 'montserrat-bold', sans-serif, Arial;
+    font-family: 'montserrat-bold', Helvetica, Arial, sans-serif;
     font-weight: bold;
 }
 
 .home-slide-item h4 {
     font-size: 35px;
     line-height: 41px;
-    font-family: 'montserrat-bold', sans-serif, Arial;
+    font-family: 'montserrat-bold', Helvetica, Arial, sans-serif;
     font-weight: normal;
     padding: 17px 0 0 18px;
 }
@@ -1993,7 +1991,7 @@ img.floatRight, .imageCaption.floatRight {
 .banner-item h2 {
     font-size: 35px;
     line-height: 39px;
-    font-family: 'montserrat-bold', sans-serif, Arial;
+    font-family: 'montserrat-bold', Helvetica, Arial, sans-serif;
     font-weight: normal;
     padding: 8px 8px 4px 8px !important;
 }
@@ -2001,7 +1999,7 @@ img.floatRight, .imageCaption.floatRight {
 .banner-item h4 {
     font-size: 16px;
     line-height: 20px;
-    font-family: 'montserrat-bold', sans-serif, Arial;
+    font-family: 'montserrat-bold', Helvetica, Arial, sans-serif;
     font-weight: normal;
     padding: 78px 10px 5px 8px;
     word-spacing: 1px;
@@ -2057,7 +2055,7 @@ a.arrow {
     line-height: 18px;
     color: #373F46;
     padding: 8px 8px 5px;
-    font-family: 'montserrat-bold', sans-serif, Arial;
+    font-family: 'montserrat-bold', Helvetica, Arial, sans-serif;
 }
 
 .view-homepage-tiles .view-content {
@@ -2234,7 +2232,7 @@ a.arrow {
     padding: 0 0 6px;
     font-size: 15px;
     line-height: 18px;
-    font-family: 'montserrat-regular';
+    font-family: 'montserrat-regular', Helvetica, Arial, sans-serif;
 }
 
 .contact-form .webform-client-form > div > .form-item {
@@ -2480,7 +2478,7 @@ ul.primary li a {
   color: #FFFFFF;
   border: 1px solid transparent;
   border-bottom: 0 !important;
-  font-family: "montserrat-regular", "Serif";
+  font-family: "montserrat-regular", Helvetica, Arial, sans-serif;
   font-weight: normal;
   -webkit-transition: all 0.1s;
   -moz-transition: all 0.1s;

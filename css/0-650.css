@@ -207,10 +207,6 @@
     margin: 0;
   }
 
-  #mainMenu {
-    margin-bottom: 10px;
-  }
-
   #mainMenu, #mainMenu li {
     height: auto !important;
     padding: 0;
