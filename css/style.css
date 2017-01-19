@@ -269,6 +269,7 @@ p.category {
     background-image: url("../images/background-md.jpg");
     background-size: cover;
     background-attachment: fixed;
+    background-position: 50% 100%;
     max-width: none;
     width: 100%;
     clear: both;
