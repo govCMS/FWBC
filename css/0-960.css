@@ -1,7 +1,6 @@
 @media screen and (max-width: 960px) {
 
   .region-page-top, #mainMenu, #footer, .wrapper, .header, .content, .wideBox {
-    float:left;
     max-width: 660px;
   }
 
@@ -47,11 +46,6 @@
     /*width: 768px;*/
     text-align: left;
     margin: auto;
-    width: 100%;
-  }
-
-  .breadcrumbs-list {
-    width: 614px;
   }
 
   #mainMenu, #mainMenu li {
@@ -172,9 +166,7 @@
   .contentBox {
     /*width: 513px;*/
     overflow: hidden;
-    margin-left: 5px;
     width: auto;
-    padding: 5px;
 
   }
 

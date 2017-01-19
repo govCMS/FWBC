@@ -55,7 +55,7 @@
 <?php print $page_top; ?>
 <?php $site_name = variable_get('site_name'); ?>
 <a id="skipto" href="#content">Skip to content</a>
-<div class="wrapper-header">
+<div class="wrapper-header clearfix">
   <div class="header">
     <div id="search">
       <?php $keys = @$_GET['keys'];
@@ -63,10 +63,7 @@
         $keys = 'Search...';
       } ?>
       <form action="<?php echo fwbc_page_url('node/' . theme_get_setting('fwbc_search_page')); ?>" onsubmit="search_presubmit();">
-        <input type="text" name="keys" id="searchBox" title="Search this site"
-                value="<?php echo $keys; ?>"
-                onfocus="if(this.value=='Search this site...'){this.value='';}"
-                onblur="if(this.value==''){this.value='Search this site...';}"/>
+        <input type="text" name="keys" id="searchBox" title="Search this site" placeholder="Search this site...">
         <input type="submit" value="Search" id="searchBtn"/>
       </form>
     </div>
@@ -87,7 +84,7 @@
   <div class="clear"></div>
 </div>
 
-<div class="wrapper-footer">
+<div class="wrapper-footer clearfix">
   <div id="footer">
   <!--  <div class="wideBox">-->
     <?php //fwbc_the_block(2, FALSE); ?>
