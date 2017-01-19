@@ -9,9 +9,14 @@
     background-image: url("../images/background-vert.jpg");
   }
 
-  #home-content-region .block {
+  #home-content-region .region-homepage-left .block {
     margin-right: 10px;
   }
+
+  #home-content-region .region-homepage-right .block {
+    margin-left: 10px;
+  }
+
 
   #fwbcOnSite.box {
     background-size: 250px;
