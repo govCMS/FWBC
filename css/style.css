@@ -102,7 +102,6 @@ img.newsThumb {
 }
 
 .breadcrumbs-list {
-    max-width: 792px;
     overflow: hidden;
     height: 21px;
     line-height: 21px;
@@ -464,6 +463,11 @@ a#skipto:active {
 
 #mainMenu > li {
     display: table-cell;
+    border-right: 1px solid #FFFFFF;
+}
+
+#mainMenu > li.last {
+  border-right: none;
 }
 
 #mainMenu li > div {
@@ -475,7 +479,6 @@ a#skipto:active {
     padding: 14px 20px;
     margin: 0;
     height: auto;
-  border-right: 1px solid #FFFFFF;
 }
 
 #mainMenu li ul {
@@ -560,7 +563,6 @@ a#skipto:active {
     zoom: 1;
 }
 .content .wideBox {
-  padding: 15px !important;
   background: rgba(255,255,255,0.9);
 }
 .wideBox .wideBox-half {
@@ -765,7 +767,6 @@ a#skipto:active {
 }
 .page-node-10 .contentBox.wide {
   margin: auto;
-  width: 100%;
   float: none;
   max-width: 950px;
 }
@@ -2085,7 +2086,6 @@ a.arrow {
 #home-content-region {
   background: rgba(255,255,255,0.8);
   display: table;
-  width: 100%;
   padding:0;
 }
 #home-content-region .block {
@@ -2532,13 +2532,14 @@ ul.primary li a:hover {
 .region-top-information-banner .block {
   max-width:960px;
   margin:auto;
-  padding: 20px 0;
+  padding: 20px;
   background: #ACACAC;
 }
 .region-top-information-banner .block h2 {
   font-size: 2em;
-  line-height: 2em;
+  line-height: 1.4em;
   text-transform: none;
+  margin-bottom: 0.5em;
 }
 .region-top-information-banner .block p {
   font-size: 2em;

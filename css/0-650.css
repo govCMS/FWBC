@@ -3,11 +3,14 @@
   .region-page-top, #mainMenu, #footer, .wrapper, .header, .content, .wideBox, .content > div, .content-box, .box {
     float:left;
     max-width: 100%;
-    width: 100%;
   }
 
   .content {
     background-image: url("../images/background-vert.jpg");
+  }
+
+  #home-content-region .block {
+    margin-right: 10px;
   }
 
   #fwbcOnSite.box {
@@ -39,7 +42,7 @@
 
   #subNav,
   .contentBox h1 {
-    margin-top: 2em !important;
+    margin-top: 0.3em !important;
   }
 
   .contact-form .webform-client-form > div > .form-item > label {
@@ -67,6 +70,10 @@
   #mainMenu {
     display: inline-block;
     width: 100%;
+  }
+
+  #mainMenu > li {
+    border-right: none;
   }
 
   #mainMenu li ul {
@@ -103,7 +110,6 @@
   }
 
   .wrapper, .header, .content, .box, #rightContent .box, #subNav, .headingBox, #newsletterContent {
-    width: 100%;
     text-align: left;
     margin: auto;
     margin-bottom: 10px;
@@ -232,7 +238,6 @@
 
   #logo img {
     width: auto;
-    height: 80px;
   }
 
   #promoArea.box, #promoArea img {

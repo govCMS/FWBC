@@ -63,10 +63,7 @@
         $keys = 'Search...';
       } ?>
       <form action="<?php echo fwbc_page_url('node/' . theme_get_setting('fwbc_search_page')); ?>" onsubmit="search_presubmit();">
-        <input type="text" name="keys" id="searchBox" title="Search this site"
-                value="<?php echo $keys; ?>"
-                onfocus="if(this.value=='Search this site...'){this.value='';}"
-                onblur="if(this.value==''){this.value='Search this site...';}"/>
+        <input type="text" name="keys" id="searchBox" title="Search this site" placeholder="Search this site...">
         <input type="submit" value="Search" id="searchBtn"/>
       </form>
     </div>
