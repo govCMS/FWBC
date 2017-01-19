@@ -2127,8 +2127,10 @@ a.arrow {
   text-align: right;
 }
 
+.btn,
 #home-content-region a.btn {
   color: #fff;
+  display: inline-block;
   font-family: "muli-bold",  Arial, Helvetica, sans-serif;
   font-weight: bold;
   padding: 12px 20px;
@@ -2141,6 +2143,8 @@ a.arrow {
   transition: all 0.4s;
 }
 
+.btn:hover,
+.btn:focus.
 #home-content-region a.btn:hover,
 #home-content-region a.btn:focus {
   background: #FFFFFF;
