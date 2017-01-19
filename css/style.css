@@ -1797,7 +1797,6 @@ img.floatRight, .imageCaption.floatRight {
     overflow: hidden;
     border: none;
     position: relative;
-    background: #ce3549;
     height: 125px;
 }
 
@@ -2536,13 +2535,13 @@ ul.primary li a:hover {
   background: #ACACAC;
 }
 .region-top-information-banner .block h2 {
-  font-size: 2em;
+  font-size: 1.3em;
   line-height: 1.4em;
   text-transform: none;
   margin-bottom: 0.5em;
 }
 .region-top-information-banner .block p {
-  font-size: 2em;
+  font-size: 1.3em;
   line-height: 1.2em;
   display: inline-block;
   width: 100%;

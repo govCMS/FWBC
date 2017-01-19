@@ -24,17 +24,11 @@ $union = $_GET['union'];
 					<?php endif; ?>
 					<?php echo render($page['content']); ?>
 					<?php echo views_embed_view('no_permit'); ?>
-					<p>&nbsp;</p>
-					<p>This information was obtained by reference to annual returns filed with the Fair Work Commission, websites of relevant building associations and the <a href="http://www.fwc.gov.au/index.cfm?pagename=entryfwfind" title="Fair Work Commission website">Fair Work Commission website</a>.  The <a href="http://www.fwc.gov.au/index.cfm?pagename=entryfwfind" title="Fair Work Commission website">Fair Work Commission website</a> enables you to check if a union official holds a valid entry permit.</p>
-
-					<p>FWBC obtained this information for the purposes of carrying out its functions to the industry under section 10 of the Fair Work (Building Industry) Act 2012, including:</p>
-					<ul>
-						<li>Providing education, assistance and advice</li>
-						<li>Promoting and monitoring compliance with designated building laws</li>
-						<li>Promoting productive workplaces in the building industry</li>
-					</ul>
-					<p>See the <a href="http://www.fwbc.gov.au/right-of-entry">Right of entry</a> section for more information about your rights and responsibilities.</p>
-					<p>If you believe your name should not appear on the above list, please <a href="http://www.fwbc.gov.au/contact-us/">contact FWBC</a>.</p>
+          <?php $bottom_content = field_get_items('node', $node, 'field_bottom_content');
+					if ($bottom_content != FALSE) {
+					  echo $bottom_content[0]['value'];
+					}
+					?>
 				</div>
 				<div class="refineSearch">
 					<form name="legal_cases_filter" id="legal-cases-filter">
