@@ -1918,7 +1918,7 @@ img.floatRight, .imageCaption.floatRight {
 }
 
 #newsletterContent .box .buttons a.more {
-    width: 218px;
+    width: 215px;
 }
 
 #newsletterContent .box .buttons a:hover,
@@ -1935,7 +1935,7 @@ img.floatRight, .imageCaption.floatRight {
     margin: 0 !important;
     color: #a09e93 !important;
     font-size: 11px !important;
-    padding-bottom: 1px !important;
+    padding: 10px 20px;
 }
 
 #newsletterContent .wideBox p {
