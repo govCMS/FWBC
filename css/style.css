@@ -2172,6 +2172,9 @@ a.arrow {
 #fwbc-on-site-new .banner-item h2 a, #fwbc-on-site-new .banner-item h4 a {
     color: #003956 !important;
 }
+#block-views-home-latest-news-block .views-field-title {
+  margin-bottom: 10px;
+}
 #block-views-home-latest-news-block .views-field-title a {
   color: #003956;
   text-transform: uppercase;
