@@ -2,6 +2,8 @@
 
   .region-page-top, #mainMenu, #footer, .wrapper, .header, .content, .wideBox {
     max-width: 100vw;
+    display: table;
+    width: 100%;
   }
 
   #mainMenu li ul {
