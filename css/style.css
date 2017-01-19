@@ -69,8 +69,7 @@ body {
     color: #373f46;
 }
 .wrapper-header, .wrapper-footer {
-  width: 100%;
-  display: inline-block;
+  display: block;
   background: #003956;
 }
 .wrapper-header {
@@ -478,13 +477,12 @@ a#skipto:active {
     display: block;
     padding: 14px 20px;
     margin: 0;
-    height: auto;
 }
 
 #mainMenu li ul {
     width: 230px;
     position: absolute;
-    top: 41px;
+    top: 100%;
     left: 0;
     display: none;
 }
@@ -503,7 +501,6 @@ a#skipto:active {
     display: block;
     margin: 0;
     padding: 12px 0 0;
-    height: 26px;
     font-size: 13px;
     text-decoration: none;
     color: #fff;

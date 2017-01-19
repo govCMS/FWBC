@@ -55,7 +55,7 @@
 <?php print $page_top; ?>
 <?php $site_name = variable_get('site_name'); ?>
 <a id="skipto" href="#content">Skip to content</a>
-<div class="wrapper-header">
+<div class="wrapper-header clearfix">
   <div class="header">
     <div id="search">
       <?php $keys = @$_GET['keys'];
@@ -84,7 +84,7 @@
   <div class="clear"></div>
 </div>
 
-<div class="wrapper-footer">
+<div class="wrapper-footer clearfix">
   <div id="footer">
   <!--  <div class="wideBox">-->
     <?php //fwbc_the_block(2, FALSE); ?>
