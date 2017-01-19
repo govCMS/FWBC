@@ -51,7 +51,7 @@ $abreach = $_GET['abreach'];
 					<?php } ?>
 
 					<?php
-					$filter_states = fwbc_get_taxonomies('state', 'legal_case');
+					$filter_states = fwbc_get_taxonomies('state', 'legal_case_new');
 					if ($filter_states) {
 						$state_all = 0;
 						foreach ($filter_states as $filter_state) {
@@ -77,7 +77,7 @@ $abreach = $_GET['abreach'];
 					<?php } ?>
 
 					<?php
-					$filter_abreaches = fwbc_get_taxonomies('alleged_breach', 'legal_case');
+					$filter_abreaches = fwbc_get_taxonomies('alleged_breach', 'legal_case_new');
 					if ($filter_abreaches) {
 						$abreach_all = 0;
 						foreach ($filter_abreaches as $filter_abreach) {
