@@ -55,7 +55,7 @@
 <?php print $page_top; ?>
 <?php $site_name = variable_get('site_name'); ?>
 <a id="skipto" href="#content">Skip to content</a>
-<div class="wrapper-header">
+<div class="wrapper-header clearfix">
   <div class="header">
     <div id="search">
       <?php $keys = @$_GET['keys'];
@@ -63,18 +63,13 @@
         $keys = 'Search...';
       } ?>
       <form action="<?php echo fwbc_page_url('node/' . theme_get_setting('fwbc_search_page')); ?>" onsubmit="search_presubmit();">
-        <input type="text" name="keys" id="searchBox" title="Search this site"
-                value="<?php echo $keys; ?>"
-                onfocus="if(this.value=='Search this site...'){this.value='';}"
-                onblur="if(this.value==''){this.value='Search this site...';}"/>
+        <input type="text" name="keys" id="searchBox" title="Search this site" placeholder="Search this site...">
         <input type="submit" value="Search" id="searchBtn"/>
       </form>
     </div>
     <div id="logo">
-      <a href="<?php echo fwbc_home_url(); ?>" title="<?php echo $site_name; ?>">
-        <svg width="295" height="89">
-          <image xlink:href="<?php fwbc_theme_url(); ?>/images/branding/crest.png" src="<?php fwbc_theme_url(); ?>/images/branding/crest.png" srcset="<?php fwbc_theme_url(); ?>/images/branding/crest.png 1x, <?php fwbc_theme_url(); ?>/images/branding/crest.png 2x, <?php fwbc_theme_url(); ?>/images/branding/crest.png 3x, <?php fwbc_theme_url(); ?>/images/branding/crest.png 4x" width="295" height="92" alt="<?php echo $site_name; ?>" width="330" height="97"/>
-        </svg>
+      <a href="<?php echo fwbc_home_url(); ?>" title="Go to the <?php echo $site_name; ?> homepage">
+        <img src="<?php fwbc_theme_url(); ?>/images/branding/abcc-crest-on-003956.gif" srcset="<?php fwbc_theme_url(); ?>/images/branding/abcc-crest-on-003956.gif 1x, <?php fwbc_theme_url(); ?>/images/branding/abcc-crest-on-003956_2x.gif 2x, <?php fwbc_theme_url(); ?>/images/branding/crest.png 3x, <?php fwbc_theme_url(); ?>/images/branding/crest.png 4x" width="295" height="92" alt="Go to the <?php echo $site_name; ?> homepage" />
       </a>
     </div>
   </div>
@@ -89,7 +84,7 @@
   <div class="clear"></div>
 </div>
 
-<div class="wrapper-footer">
+<div class="wrapper-footer clearfix">
   <div id="footer">
   <!--  <div class="wideBox">-->
     <?php //fwbc_the_block(2, FALSE); ?>

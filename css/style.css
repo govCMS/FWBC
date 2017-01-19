@@ -25,6 +25,10 @@ footer, header, hgroup, menu, nav, section {
     display: block;
 }
 
+html {
+  background: #003956;
+}
+
 body {
     line-height: 1;
 }
@@ -60,14 +64,12 @@ body {
     text-align: center;
     padding: 0;
     margin: 0;
-    font-family: muli-regular, Georgia, "Times New Roman", Times, serif;
+    font-family: muli-regular, Helvetica, Arial, sans-serif;
     font-size: 12px;
     color: #373f46;
-    min-width: 960px;
 }
 .wrapper-header, .wrapper-footer {
-  width: 100%;
-  display: inline-block;
+  display: block;
   background: #003956;
 }
 .wrapper-header {
@@ -99,8 +101,9 @@ img.newsThumb {
 }
 
 .breadcrumbs-list {
-    width: 792px;
-    overflow: hidden;
+    line-height: 21px;
+    display: inline-block;
+    max-width: 700px;
 }
 
 .breadcrumbs-list-links {
@@ -114,7 +117,7 @@ img.newsThumb {
 
 .breadcrumbs-list-title {
     float: left;
-    padding: 2px 5px 0 0;
+    padding: 0 5px 0 0;
 }
 
 a {
@@ -156,7 +159,7 @@ p {
 
 .blackText {
     color: #373f46;
-    font-family: 'muli-bold', Georgia, "Times New Roman", Times, serif;
+    font-family: 'muli-bold', Helvetica, Arial, sans-serif;
     text-transform: none;
 }
 
@@ -170,7 +173,7 @@ h1 {
     text-transform: uppercase;
     color: #003956;
     margin-bottom: 15px;
-    font-family: 'montserrat-bold', sans-serif, Arial;
+    font-family: 'montserrat-bold', Helvetica, Arial, sans-serif;
 }
 
 h2 {
@@ -179,7 +182,7 @@ h2 {
     font-size: 15px;
     line-height: 20px;
     font-weight: normal;
-    font-family: 'montserrat-bold', sans-serif, Arial;
+    font-family: 'montserrat-bold', Helvetica, Arial, sans-serif;
 }
 
 .contentBox h2 {
@@ -191,7 +194,7 @@ h3 {
     font-size: 13px;
     margin-bottom: 10px;
     line-height: 18px;
-    font-family: 'montserrat-regular';
+    font-family: 'montserrat-regular', Helvetica, Arial, sans-serif;
 }
 
 h4 {
@@ -200,7 +203,7 @@ h4 {
     margin-bottom: 10px;
     line-height: 18px;
     font-weight: normal;
-    font-family: 'montserrat-regular';
+    font-family: 'montserrat-regular', Helvetica, Arial, sans-serif;
 }
 
 h5 {
@@ -209,7 +212,7 @@ h5 {
     font-size: 12px;
     margin-bottom: 10px;
     line-height: 18px;
-  font-family: 'montserrat-regular';
+  font-family: 'montserrat-regular', Helvetica, Arial, sans-serif;
 }
 
 h5 span {
@@ -217,7 +220,7 @@ h5 span {
 }
 
 h6 {
-  font-family: 'montserrat-regular';
+  font-family: 'montserrat-regular', Helvetica, Arial, sans-serif;
     line-height: 18px;
 }
 
@@ -234,7 +237,7 @@ p.introText {
     font-size: 14px;
     margin-bottom: 10px;
     line-height: 22px;
-    font-family: 'muli-bold', Georgia, "Times New Roman", Times, serif;
+    font-family: 'muli-bold', Helvetica, Arial, sans-serif;
 }
 
 .clear {
@@ -258,10 +261,15 @@ p.category {
 #mainMenu {
 }
 
+#block-system-main {
+  background: rgba(255,255,255,0.9);
+}
+
 .content {
-    background-image: url("../images/background-lg.jpg");
+    background-image: url("../images/background-md.jpg");
     background-size: cover;
     background-attachment: fixed;
+    background-position: 50% 100%;
     max-width: none;
     width: 100%;
     clear: both;
@@ -316,7 +324,7 @@ p.category {
     border: none;
     font-size: 12px;
     margin-left: 5px;
-    font-family: muli-regular, Georgia, "Times New Roman", Times, serif;
+    font-family: muli-regular, Helvetica, Arial, sans-serif;
 }
 
 #globalNavigation ul {
@@ -439,11 +447,12 @@ a#skipto:active {
 #mainMenu {
     background: #003956;
     padding: 0;
-    font-family: muli-regular, Georgia, "Times New Roman", Times, serif;
+    font-family: muli-regular, Helvetica, Arial, sans-serif;
     z-index: 200;
     position: relative;
     display: table;
     width: 100%;
+    margin-bottom: 0;
 }
 
 #mainMenu li {
@@ -453,6 +462,11 @@ a#skipto:active {
 
 #mainMenu > li {
     display: table-cell;
+    border-right: 1px solid #FFFFFF;
+}
+
+#mainMenu > li.last {
+  border-right: none;
 }
 
 #mainMenu li > div {
@@ -463,14 +477,12 @@ a#skipto:active {
     display: block;
     padding: 14px 20px;
     margin: 0;
-    height: auto;
-  border-right: 1px solid #FFFFFF;
 }
 
 #mainMenu li ul {
     width: 230px;
     position: absolute;
-    top: 41px;
+    top: 100%;
     left: 0;
     display: none;
 }
@@ -489,14 +501,13 @@ a#skipto:active {
     display: block;
     margin: 0;
     padding: 12px 0 0;
-    height: 26px;
     font-size: 13px;
     text-decoration: none;
     color: #fff;
     border-right: 1px solid #003956;
     border-left: 1px solid #003956;
     background: #003956;
-    font-family: 'muli-bold', Georgia, "Times New Roman", Times, serif;
+    font-family: 'muli-bold', Helvetica, Arial, sans-serif;
     text-align: center;
 }
 
@@ -523,7 +534,7 @@ a#skipto:active {
 #mainMenu li ul li a {
     text-align: left;
     width: 200px;
-    font-family: muli-regular, Georgia, "Times New Roman", Times, serif;
+    font-family: muli-regular, Helvetica, Arial, sans-serif;
     font-size: 12px;
     z-index: 200;
     border: none;
@@ -544,11 +555,12 @@ a#skipto:active {
 
 .wideBox {
     margin:auto;
-    background: transparent;
     position: relative;
-    padding: 10px;
     max-width:960px;
     zoom: 1;
+}
+.content .wideBox {
+  background: rgba(255,255,255,0.9);
 }
 .wideBox .wideBox-half {
   background: transparent;
@@ -716,7 +728,7 @@ a#skipto:active {
 
 #subNav h2 {
     padding-bottom: 10px;
-    font-family: 'montserrat-bold', sans-serif, Arial;
+    font-family: 'montserrat-bold', Helvetica, Arial, sans-serif;
     font-weight: normal;
     background: rgba(255,255,255,0.7);
 }
@@ -749,6 +761,16 @@ a#skipto:active {
     padding: 15px;
     float: left;
     max-width: 700px;
+}
+.page-node-10 .contentBox.wide {
+  margin: auto;
+  float: none;
+  max-width: 950px;
+}
+.page-node-10 #leftContent {
+  width: 100%;
+  max-width: none;
+  display: block;
 }
 
 .page-user .contentBox{
@@ -1260,7 +1282,6 @@ a.icon {
   background-size: 28px 28px;
   background-position: center;
   background-repeat: no-repeat;
-  margin-bottom: 10px;
 }
 #mainMenu li#home > div > a:hover,
 #mainMenu li#home > div > a:focus {
@@ -1285,31 +1306,39 @@ a.icon {
     background-repeat: no-repeat;
     background-position: center right;
     background-size: 10px 10px;
-    padding: 0 12px 2px 0;
+    padding: 0 12px 0 0;
+    height: 21px;
+    line-height: 21px;
 }
 
 #pageTools {
-    position: absolute;
-    display: block;
-    padding: 3px 9px 3px 11px;
-    width: 200px;
-    height: 30px;
-    top: 3px;
+    display: inline-block;
+    float: right;
+    width: 100px;
+    height: 21px;
+    top: 0;
     right: 0;
     text-align: right;
     z-index: 90;
 }
 
 #pageTools a, .addthis_toolbox, .addthis_toolbox a {
-    display: inline-block;
+    display: table-cell;
     padding: 0;
     background: none;
     margin-right: 0;
+    height: 21px;
+    line-height: 21px;
+}
+
+#pageTools a img, .addthis_toolbox, .addthis_toolbox a img {
+  display: table-cell;
+  vertical-align: middle;
+  max-height: 21px;
 }
 
 .addthis_toolbox {
   margin: 0 5px 0 0;
-  vertical-align: middle;
 }
 
 .addthis_toolbox > .addthis_button_compact > .at-icon-wrapper {
@@ -1344,10 +1373,8 @@ span.hidden {
 
 a#bigTextIcon {
     width: 19px;
-    height: 20px;
-    display: inline-block;
+    height: 21px;
     overflow: hidden;
-    margin-bottom: -2px;
 }
 
 a:hover#bigTextIcon, a#bigTextIcon.selected {
@@ -1355,10 +1382,8 @@ a:hover#bigTextIcon, a#bigTextIcon.selected {
 
 a#mediumTextIcon {
     width: 18px;
-    height: 20px;
-    display: inline-block;
+    height: 21px;
     overflow: hidden;
-    margin-bottom: -2px;
 }
 
 a:hover#mediumTextIcon, a#mediumTextIcon.selected {
@@ -1366,27 +1391,23 @@ a:hover#mediumTextIcon, a#mediumTextIcon.selected {
 
 a#smallTextIcon {
     width: 14px;
-    height: 20px;
-    display: inline-block;
+    height: 21px;
     overflow: hidden;
-    margin-bottom: -2px;
 }
 
 a:hover#smallTextIcon, a#smallTextIcon.selected {
 }
 
 a#shareBtn {
-    width: 16px;
-    height: 16px;
-    display: inline-block;
+    width: 21px;
+    height: 21px;
     overflow: hidden;
     margin-right: 5px;
 }
 
 a#printBtn {
-    width: 16px;
-    height: 16px;
-    display: inline-block;
+    width: 21px;
+    height: 21px;
     overflow: hidden;
     margin-right: 5px;
 }
@@ -1513,7 +1534,7 @@ a#printBtn {
 .refineSearch h2 {
     margin-bottom: 5px;
     font-weight: normal;
-    font-family: 'montserrat-bold', sans-serif, Arial;
+    font-family: 'montserrat-bold', Helvetica, Arial, sans-serif;
 }
 
 .refineSearch input {
@@ -1776,6 +1797,7 @@ img.floatRight, .imageCaption.floatRight {
     overflow: hidden;
     border: none;
     position: relative;
+    height: 125px;
 }
 
 .newsletterHeadingBox .social {
@@ -1789,7 +1811,6 @@ img.floatRight, .imageCaption.floatRight {
 }
 
 .inThisIssue {
-    background: #fff url(../images/newsletter_corner.jpg) no-repeat top right;
     padding: 0 !important;
     margin: 0 !important;
 }
@@ -1820,13 +1841,10 @@ img.floatRight, .imageCaption.floatRight {
     padding: 8px 10px 8px 37px !important;
     font-size: 14px;
     margin: 0 !important;
-    background: url(../images/bullet.png) no-repeat 15px 9px !important;
 }
 
 #newsletterContent {
-    float: left;
-    width: 667px;
-    padding: 15px;
+    padding-left: 15px;
     overflow: visible;
 }
 
@@ -1835,14 +1853,12 @@ img.floatRight, .imageCaption.floatRight {
     top: 23px;
     left: 17px;
     color: #f59331;
-    font: normal 43px/42px "montserrat-bold", serif;
+    font: normal 43px/42px "montserrat-bold", Helvetica, Arial, sans-serif;
     letter-spacing: -1px;
 }
 
 .newsletterStories {
     width: 690px;
-    margin-bottom: 15px;
-
 }
 
 #newsletterContent .box {
@@ -1850,7 +1866,6 @@ img.floatRight, .imageCaption.floatRight {
     margin-left: 0 !important;
     margin-right: 15px;
     padding: 14px 7px 0;
-    height: 350px;
 }
 
 #newsletterContent .fullwidth .box h3 {
@@ -1887,8 +1902,9 @@ img.floatRight, .imageCaption.floatRight {
     height: 35px;
     padding: 0 10px;
     line-height: 33px;
-    background: url("../images/gradients.jpg") repeat-x 0 0;
+    background: #003956;
     color: #fff;
+    border: 1px solid transparent;
     text-align: center;
     text-transform: uppercase;
     font-size: 15px;
@@ -1896,17 +1912,19 @@ img.floatRight, .imageCaption.floatRight {
 }
 
 #newsletterContent .box .buttons a.top {
-    background: url(../images/gradient-orange.jpg) 0 0 repeat-x;
+    background: #D03344;
 }
 
 #newsletterContent .box .buttons a.more {
-    width: 219px;
+    width: 215px;
 }
 
 #newsletterContent .box .buttons a:hover,
 #newsletterContent .box .buttons a:focus,
 #newsletterContent .box .buttons a:active {
-    background: url("../images/gradients.jpg") 0 -38px repeat-x;
+    background: #FFFFFF;
+    color: #003956;
+    border: 1px solid #003956;
     text-decoration: none;
 }
 
@@ -1915,7 +1933,7 @@ img.floatRight, .imageCaption.floatRight {
     margin: 0 !important;
     color: #a09e93 !important;
     font-size: 11px !important;
-    padding-bottom: 1px !important;
+    padding: 10px 20px;
 }
 
 #newsletterContent .wideBox p {
@@ -1942,14 +1960,14 @@ img.floatRight, .imageCaption.floatRight {
 .home-slide-item h2 {
     font-size: 44px;
     line-height: 46px;
-    font-family: 'montserrat-bold', sans-serif, Arial;
+    font-family: 'montserrat-bold', Helvetica, Arial, sans-serif;
     font-weight: bold;
 }
 
 .home-slide-item h4 {
     font-size: 35px;
     line-height: 41px;
-    font-family: 'montserrat-bold', sans-serif, Arial;
+    font-family: 'montserrat-bold', Helvetica, Arial, sans-serif;
     font-weight: normal;
     padding: 17px 0 0 18px;
 }
@@ -1969,7 +1987,7 @@ img.floatRight, .imageCaption.floatRight {
 .banner-item h2 {
     font-size: 35px;
     line-height: 39px;
-    font-family: 'montserrat-bold', sans-serif, Arial;
+    font-family: 'montserrat-bold', Helvetica, Arial, sans-serif;
     font-weight: normal;
     padding: 8px 8px 4px 8px !important;
 }
@@ -1977,7 +1995,7 @@ img.floatRight, .imageCaption.floatRight {
 .banner-item h4 {
     font-size: 16px;
     line-height: 20px;
-    font-family: 'montserrat-bold', sans-serif, Arial;
+    font-family: 'montserrat-bold', Helvetica, Arial, sans-serif;
     font-weight: normal;
     padding: 78px 10px 5px 8px;
     word-spacing: 1px;
@@ -2033,7 +2051,7 @@ a.arrow {
     line-height: 18px;
     color: #373F46;
     padding: 8px 8px 5px;
-    font-family: 'montserrat-bold', sans-serif, Arial;
+    font-family: 'montserrat-bold', Helvetica, Arial, sans-serif;
 }
 
 .view-homepage-tiles .view-content {
@@ -2057,14 +2075,12 @@ a.arrow {
 .view-homepage-tiles ul li {
     padding: 3px 7px 7px 20px;
     margin-left: 5px;
-    background: url(../images/bullet.png) no-repeat 0 3px;
     line-height: 18px;
 }
 
 #home-content-region {
   background: rgba(255,255,255,0.8);
   display: table;
-  width: 100%;
   padding:0;
 }
 #home-content-region .block {
@@ -2109,8 +2125,10 @@ a.arrow {
   text-align: right;
 }
 
+.btn,
 #home-content-region a.btn {
   color: #fff;
+  display: inline-block;
   font-family: "muli-bold",  Arial, Helvetica, sans-serif;
   font-weight: bold;
   padding: 12px 20px;
@@ -2123,6 +2141,8 @@ a.arrow {
   transition: all 0.4s;
 }
 
+.btn:hover,
+.btn:focus.
 #home-content-region a.btn:hover,
 #home-content-region a.btn:focus {
   background: #FFFFFF;
@@ -2143,7 +2163,7 @@ a.arrow {
   height: 0;
   border-color: #D03344;
   max-width: 90%;
-  margin: 0 5%;
+  margin: 1.2em 5%;
   display: inline-block;
   width: 100%;
   float: none;
@@ -2211,7 +2231,7 @@ a.arrow {
     padding: 0 0 6px;
     font-size: 15px;
     line-height: 18px;
-    font-family: 'montserrat-regular';
+    font-family: 'montserrat-regular', Helvetica, Arial, sans-serif;
 }
 
 .contact-form .webform-client-form > div > .form-item {
@@ -2344,7 +2364,7 @@ table td.active {
     font-weight: normal;
     margin-bottom: 0;
     padding: 8px 0 5px;
-    font-family: 'muli-regular', Georgia, "Times New Roman", Times, serif;
+    font-family: 'muli-regular', Helvetica, Arial, sans-serif;
 }
 
 .content-box ul.links {
@@ -2457,7 +2477,7 @@ ul.primary li a {
   color: #FFFFFF;
   border: 1px solid transparent;
   border-bottom: 0 !important;
-  font-family: "montserrat-regular", "Serif";
+  font-family: "montserrat-regular", Helvetica, Arial, sans-serif;
   font-weight: normal;
   -webkit-transition: all 0.1s;
   -moz-transition: all 0.1s;
@@ -2511,16 +2531,17 @@ ul.primary li a:hover {
 .region-top-information-banner .block {
   max-width:960px;
   margin:auto;
-  padding: 20px 0;
+  padding: 20px;
   background: #ACACAC;
 }
 .region-top-information-banner .block h2 {
-  font-size: 2em;
-  line-height: 2em;
+  font-size: 1.3em;
+  line-height: 1.4em;
   text-transform: none;
+  margin-bottom: 0.5em;
 }
 .region-top-information-banner .block p {
-  font-size: 2em;
+  font-size: 1.3em;
   line-height: 1.2em;
   display: inline-block;
   width: 100%;

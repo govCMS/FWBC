@@ -3,8 +3,20 @@
   .region-page-top, #mainMenu, #footer, .wrapper, .header, .content, .wideBox, .content > div, .content-box, .box {
     float:left;
     max-width: 100%;
-    width: 100%;
   }
+
+  .content {
+    background-image: url("../images/background-vert.jpg");
+  }
+
+  #home-content-region .region-homepage-left .block {
+    margin-right: 10px;
+  }
+
+  #home-content-region .region-homepage-right .block {
+    margin-left: 10px;
+  }
+
 
   #fwbcOnSite.box {
     background-size: 250px;
@@ -35,7 +47,7 @@
 
   #subNav,
   .contentBox h1 {
-    margin-top: 2em !important;
+    margin-top: 0.3em !important;
   }
 
   .contact-form .webform-client-form > div > .form-item > label {
@@ -65,6 +77,10 @@
     width: 100%;
   }
 
+  #mainMenu > li {
+    border-right: none;
+  }
+
   #mainMenu li ul {
     display: none !important;
   }
@@ -82,7 +98,6 @@
 
   body {
     background: #F0EFEA;
-    display: inline;
   }
 
   #subNav {
@@ -100,7 +115,6 @@
   }
 
   .wrapper, .header, .content, .box, #rightContent .box, #subNav, .headingBox, #newsletterContent {
-    width: 100%;
     text-align: left;
     margin: auto;
     margin-bottom: 10px;
@@ -204,10 +218,6 @@
     margin: 0;
   }
 
-  #mainMenu {
-    margin-bottom: 10px;
-  }
-
   #mainMenu, #mainMenu li {
     height: auto !important;
     padding: 0;
@@ -233,7 +243,6 @@
 
   #logo img {
     width: auto;
-    height: 80px;
   }
 
   #promoArea.box, #promoArea img {
