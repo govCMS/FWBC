@@ -64,7 +64,7 @@ body {
     text-align: center;
     padding: 0;
     margin: 0;
-    font-family: muli-regular, Georgia, "Times New Roman", Times, serif;
+    font-family: muli-regular, Helvetica, Arial, sans-serif;
     font-size: 12px;
     color: #373f46;
 }
@@ -160,7 +160,7 @@ p {
 
 .blackText {
     color: #373f46;
-    font-family: 'muli-bold', Georgia, "Times New Roman", Times, serif;
+    font-family: 'muli-bold', Helvetica, Arial, sans-serif;
     text-transform: none;
 }
 
@@ -1312,7 +1312,7 @@ a.icon {
 }
 
 #pageTools {
-    display: table;
+    display: inline-block;
     float: right;
     width: 100px;
     height: 21px;
@@ -1334,6 +1334,7 @@ a.icon {
 #pageTools a img, .addthis_toolbox, .addthis_toolbox a img {
   display: table-cell;
   vertical-align: middle;
+  max-height: 21px;
 }
 
 .addthis_toolbox {
@@ -1844,7 +1845,6 @@ img.floatRight, .imageCaption.floatRight {
 }
 
 #newsletterContent {
-    float: left;
     padding-left: 15px;
     overflow: visible;
 }
@@ -2366,7 +2366,7 @@ table td.active {
     font-weight: normal;
     margin-bottom: 0;
     padding: 8px 0 5px;
-    font-family: 'muli-regular', Georgia, "Times New Roman", Times, serif;
+    font-family: 'muli-regular', Helvetica, Arial, sans-serif;
 }
 
 .content-box ul.links {
