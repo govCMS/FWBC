@@ -35,6 +35,7 @@ body {
 
 ol, ul {
   list-style-position: inside;
+  font-size: 15px;
 }
 
 blockquote, q {
