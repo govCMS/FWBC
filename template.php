@@ -24,7 +24,7 @@ function fwbc_process_page(&$vars)
   $page_alias = str_replace('-', '_', $page_alias);
   // if single article, newsletter
   if (isset($vars['node'])) {
-    $sptypes = array('article', 'newsletter', 'newsletter_section', 'legal_case', 'submission');
+    $sptypes = array('article', 'newsletter', 'newsletter_section', 'legal_case', 'abcc_legal_case', 'legal_case_new', 'submission');
     if (in_array($vars['node']->type, $sptypes)) {
       $page_alias = 'single_' . $vars['node']->type;
     } else if ($vars['node']->nid == theme_get_setting('fwbc_newsletters_page')) {
