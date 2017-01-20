@@ -48,7 +48,6 @@
   if (isset($src) && !empty($src)) :
 ?>
   <div id="<?php print preg_replace('@[^a-z0-9-]+@','-', strtolower($title_raw));?>" class="box" style="background: url('<?php print $src;?>') no-repeat; background-size: cover;">
-    <div class="corner"></div>
     <div class="banner-item">
       <h2>
         <a href="<?php print $href;?>"><?php print $title_raw;?></a>
@@ -60,7 +59,6 @@
   </div>
 <?php elseif  (isset($body_rendered) && !empty($body_rendered)) :?>
   <div id="<?php print preg_replace('@[^a-z0-9-]+@','-', strtolower($title_raw));?>" class="box home-box">
-    <div class="corner"></div>
     <h2>
       <?php print $title_raw;?>
     </h2>

@@ -12,30 +12,30 @@ hide($content['field_status_submission']); // hide Status category link
 hide($content['field_state_submission']); // hide State category link
 hide($content['field_alleged_breach_submission']); // hide Alleged breach category link
 
-switch (get_node_type($variables)) {
+switch (fwbc_get_node_type($variables)) {
   case "latest_news": // latest news list page
     hide($content['field_image']); // hide image
     ?>
     <div class="post-item">
       <div class="line"></div>
       <h3><a href="<?php echo $node_url; ?>"><?php echo $title; ?></a></h3>
-      <span class="date"><?php echo get_post_added($submitted); ?></span>
+      <span class="date"><?php echo fwbc_get_post_added($submitted); ?></span>
 
       <p
-        class="category"><?php echo get_post_term($node, 'field_category'); ?></p>
+        class="category"><?php echo fwbc_get_post_term($node, 'field_category'); ?></p>
       <?php echo render($content); ?>
     </div>
     <?php
     break;
   case "newsletters": // newsletters landing page
     hide($content['field_image']); // hide image
-    $newsletter_pages = get_child_pages($node->book["mlid"], $node->vid);
+    $newsletter_pages = fwbc_get_child_pages($node->book["mlid"], $node->vid);
     if ($newsletter_pages) {
       ?>
       <ul class="bulletlist">
         <?php foreach ($newsletter_pages as $npid => $npdata) { ?>
           <li><a
-              href="<?php echo page_url('node/' . $npid); ?>"><?php echo $npdata['title']; ?></a>
+              href="<?php echo fwbc_page_url('node/' . $npid); ?>"><?php echo $npdata['title']; ?></a>
           </li>
         <?php } ?>
       </ul>
@@ -54,7 +54,7 @@ switch (get_node_type($variables)) {
           <?php foreach ($newsletter_posts as $newsletter_post) {
             $newsletter_post = node_load($newsletter_post->nid); ?>
             <li><a
-                href="<?php echo page_url('node/' . $newsletter_post->nid); ?>"><?php echo $newsletter_post->title; ?></a>
+                href="<?php echo fwbc_page_url('node/' . $newsletter_post->nid); ?>"><?php echo $newsletter_post->title; ?></a>
             </li>
           <?php } ?>
         </ul>
@@ -79,11 +79,11 @@ switch (get_node_type($variables)) {
             <h3><?php echo $newsletter_post->title; ?></h3>
 
             <div class="newsletters-list-content">
-              <p><?php echo limit_content(strip_tags(get_post_custom($newsletter_post, 'body')), 260); ?></p>
+              <p><?php echo fwbc_limit_content(strip_tags(fwbc_get_post_custom($newsletter_post, 'body')), 260); ?></p>
             </div>
             <p class="buttons">
               <a class="more"
-                 href="<?php echo page_url('node/' . $newsletter_post->nid); ?>">
+                 href="<?php echo fwbc_page_url('node/' . $newsletter_post->nid); ?>">
                 Read More
               </a>
               <a class="top" href="#top">
@@ -96,7 +96,6 @@ switch (get_node_type($variables)) {
       </div>
     <?php } ?>
     <div class="wideBox">
-      <div class="corner"></div>
       <?php echo render($content); ?>
     </div>
     <?php
@@ -140,11 +139,11 @@ switch (get_node_type($variables)) {
   default: // default page
     hide($content['field_bottom_content']); // hide image
     echo render($content);
-    $iframe_src = get_post_custom($node, 'field_iframe_src');
-    $iframe_width = get_post_custom($node, 'field_iframe_width');
-    $iframe_height = get_post_custom($node, 'field_iframe_height');
-    $iframe_scrolling = get_post_custom($node, 'field_iframe_scrolling');
-    $iframe_css_style = get_post_custom($node, 'field_iframe_css_style');
+    $iframe_src = fwbc_get_post_custom($node, 'field_iframe_src');
+    $iframe_width = fwbc_get_post_custom($node, 'field_iframe_width');
+    $iframe_height = fwbc_get_post_custom($node, 'field_iframe_height');
+    $iframe_scrolling = fwbc_get_post_custom($node, 'field_iframe_scrolling');
+    $iframe_css_style = fwbc_get_post_custom($node, 'field_iframe_css_style');
 
     if (!strlen($iframe_width)) {
       $iframe_width = '100%';

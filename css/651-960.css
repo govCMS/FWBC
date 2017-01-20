@@ -1,0 +1,53 @@
+@media screen and (min-width: 651px) and (max-width: 960px) {
+
+  .content {
+    background-image: url("../images/background-md.jpg");
+  }
+
+  .box {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto !important;
+
+  }
+
+  .banner-item h2 {
+    font-size: 25px !important;
+    line-height: 28px !important;
+    font-family: 'montserrat-bold', serif;
+    font-weight: normal;
+    padding: 8px 8px 4px 8px !important;
+  }
+
+  .banner-item h4 {
+    font-size: 14px !important;
+    line-height: 18px !important;
+    font-family: 'montserrat-bold', serif;
+    font-weight: normal;
+    padding: 0px 15px 5px 15px !important;
+    word-spacing: 0px !important;
+    position: absolute;
+  }
+
+  #promoArea.box, #industryUpdate.box, #fwbcOnSite.box, #noPermits.box, #strike.box, #buildingCode2013.box, #drugAndAlcohol.box {
+    background-position: right;
+    background-size: cover;
+  }
+
+  #fwbcOnSite.box {
+    background-size: 190px;
+    background-position: center center;
+  }
+
+  #strike.box {
+    background-position: left;
+  }
+
+  .home-box.box p {
+    padding: 0 8px 7px 8px;
+  }
+
+  .home-box.box li {
+    padding: 0px 7px 0px 20px;
+  }
+}

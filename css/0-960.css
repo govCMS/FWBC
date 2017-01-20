@@ -1,0 +1,284 @@
+@media screen and (max-width: 960px) {
+
+  .region-page-top, #mainMenu, #footer, .wrapper, .header, .content, .wideBox {
+    max-width: 660px;
+  }
+
+  body {
+    /*min-width: 320px;*/
+  }
+
+  .content {
+    margin: auto;
+  }
+
+  .site-map-menu .leaf {
+    width: 260px;
+  }
+
+  .home-slide-item {
+    height: 195px;
+  }
+
+  .home-slide-item h2 {
+  }
+
+  .home-slide-item h2 a {
+  }
+
+  .home-slide-item h4 {
+    padding-top: 30px;
+  }
+
+  .home-slide-item h4 a {
+  }
+
+  .banner-item {
+    height: 202px;
+  }
+
+  /*.banner-item h2 {padding-left: 4px!important;padding-top: 22px!important;}
+  .banner-item h2 a {}
+  .banner-item h4 {padding-top: 35px;padding-left: 5px;}
+  .banner-item h4 a {}
+  .home-left-banner-item h4 {width:auto!important;padding-top:120px!important;}*/
+  .wrapper, .header, .content {
+    /*width: 768px;*/
+    text-align: left;
+    margin: auto;
+  }
+
+  #mainMenu, #mainMenu li {
+    overflow: hidden;
+  }
+
+  #mainMenu li a {
+    font-size: 12px;
+  }
+
+  .ips {
+    /*right:308px;*/
+  }
+
+  .wideBox {
+    margin: 1px 10px 0;
+    padding:0;
+    width: auto;
+  }
+
+  #footer .wideBox:nth-child(2) {
+    padding-bottom: 30px;
+  }
+
+  #breadCrumbs {
+    margin: 0;
+  }
+
+  ul#tabs li a {
+    padding: 8px 6px;
+  }
+
+  ul#tabs li a.selected {
+    padding: 8px 6px;
+  }
+
+  #slideshow.box {
+    width: 496px;
+    padding: 0;
+    height: 202px;
+    overflow: hidden;
+  }
+
+  #slideshow.box img {
+    width: 496px;
+    height: auto;
+  }
+
+  #slideshow .corner {
+    z-index: 1000;
+  }
+
+  #pager ul {
+    width: 500px;
+  }
+
+  #pager ul li.first {
+    width: 13%;
+  }
+
+  #pager ul li.second {
+    width: 20%;
+  }
+
+  #pager ul li.third {
+    width: 39%;
+  }
+
+  #pager ul li.last {
+    width: 28%;
+  }
+
+  #pager ul li a {
+    padding: 7px 0px 0 0px !important;
+    height: 20px;
+    font-size: 10px !important;
+  }
+
+  #pager ul li.last a {
+    padding: 7px 20px 0 20px;
+  }
+
+  #promoArea.box, #promoArea.box img {
+    width: 242px;
+    padding: 0;
+    height: auto;
+  }
+
+  #footer ul {
+    margin-right: 5px !important;
+    padding-left: 5px !important;
+    width: 117px;
+  }
+
+  #footer .footer-bottom ul {
+    width: auto;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  #footer ul li {
+    line-height: 16px;
+  }
+
+  #subNav {
+    width: 180px;
+    margin-top: 10px;
+  }
+
+  .headingBox {
+    overflow: hidden;
+    margin-left: 5px;
+    margin-top: 0;
+    width: auto;
+    float: none;
+  }
+
+  .contentBox {
+    /*width: 513px;*/
+    overflow: hidden;
+    width: auto;
+
+  }
+
+  .contentBox.wide {
+    width: auto;
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    overflow: hidden;
+    float: none;
+  }
+
+  .legal-cases-list .contentBox.wide .content-block {
+    /*width: 370px;*/
+    float: left;
+  }
+
+  .refineSearch {
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 0;
+    margin-top: -5px;
+  }
+
+  /*.box p{
+      padding:0 8px 10px 0;
+  }
+  .box h3 {
+      font-weight: normal;
+      margin-bottom: 0;
+      padding: 8px 8px 5px 0;
+  }*/
+  /*.box h2 {
+      padding: 8px 8px 5px 0;
+  }*/
+  #rightContent {
+    padding: 0;
+    margin: 0;
+    width: inherit;
+    float: none;
+
+  }
+
+  .page-node-16 .content-box {
+    width: auto;
+    margin-right: 10px;
+  }
+
+  .newsletterStories {
+    width: auto;
+  }
+
+  #newsletterContent {
+    float: none;
+    overflow: hidden;
+    width: auto;
+  }
+
+  #newsletterContent .newsletterHeadingBox > img {
+    min-height: 125px;
+  }
+
+  #newsletterContent .wideBox {
+    width: auto;
+  }
+
+  #newsletter-signup-box form {
+    padding: 0;
+  }
+
+  .legal-cases-list .content-block {
+    float: none;
+    width: auto;
+  }
+
+  #footer {
+    padding-top: 9px;
+    width: 100%;
+  }
+
+  #rightContent .box {
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding: 7px;
+    width: 100%;
+  }
+
+  #rightContent h2 {
+  rgba(255, 255, 255, 0.7);
+  }
+
+  #sign-up-newsletter-page .contact-form .webform-client-form #edit-actions {
+    padding: 10px 10px 10px 0;
+  }
+
+  .home-left-container {
+    width: 253px;
+  }
+
+  .home-left-banner-item {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  #home-content-region .region.region-homepage-left {
+    float:none;
+    max-width: 100%;
+  }
+  #home-content-region .region.region-homepage-right {
+    float:none;
+    max-width: 100%;
+  }
+
+}

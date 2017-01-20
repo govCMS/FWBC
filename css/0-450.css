@@ -1,0 +1,6 @@
+@media only screen and (max-width: 450px) {
+  /* Mobile only */
+  .content {
+    background-image: url("../images/background-vert.jpg");
+  }
+}

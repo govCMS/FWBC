@@ -1,0 +1,28 @@
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (max-width: 1024px) {
+  #mainMenu li ul {
+    display: none !important;
+  }
+
+  .wideBox {
+    width: auto;
+    margin: 1px 10px 0;
+  }
+
+  .header {
+    width: 960px;
+    margin:auto;
+  }
+
+}
+
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (max-device-width: 480px) {
+  #mainMenu li ul {
+    display: none !important;
+  }
+}

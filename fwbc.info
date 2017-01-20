@@ -1,11 +1,45 @@
 screenshot  = screenshot.png
-name = FWBC
-description = FWBC theme.
+name = ABCC
+description = ABCC theme (based on old FWBC theme)
 core = 7.x
 engine = phptemplate
 
+; Regions
+
+regions[header]         = Header
+regions[navigation]     = Navigation bar
+regions[highlighted]    = Highlighted
+regions[help]           = Help
+regions[content]        = Content
+regions[sidebar_first]  = First sidebar
+regions[sidebar_second] = Second sidebar
+regions[footer]         = Footer
+regions[bottom]         = Page bottom
+regions[page_top]       = Page top
+regions[page_bottom]    = Page bottom
+
+; Extra regions not included in govcms_barton
+
+; This region will prevent the continued use of static,
+; duplicated content in all templates. Drupal is not wordpress,
+; Drupal is not DreamWeaver - You should start this theme from scratch!
+regions[homepage_left] = Homepage (Left)
+regions[homepage_right] = Homepage (Right)
+regions[top_information_banner] = Top Information Banner
+
 ; Stylesheet
+stylesheets[all][] = css/fonts.css
+
+; Base/all styles
 stylesheets[all][] = css/style.css
+; Other
+stylesheets[all][] = css/0-450.css
+stylesheets[all][] = css/0-650.css
+stylesheets[all][] = css/0-960.css
+stylesheets[all][] = css/0-1024.css
+stylesheets[all][] = css/651-960.css
+stylesheets[all][] = css/768-1024.css
+; Print
 stylesheets[print][] = css/print.css
 
 ; JavaScripts
