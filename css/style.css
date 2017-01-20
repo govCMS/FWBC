@@ -153,7 +153,7 @@ a.infoLink {
 p {
     padding: 0;
     margin: 0 0 10px 0;
-    font-size: 12px;
+    font-size: 15px;
     line-height: 18px;
 }
 
@@ -179,7 +179,7 @@ h1 {
 h2 {
     color: #003956;
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 20px;
     font-weight: normal;
     font-family: 'montserrat-bold', Helvetica, Arial, sans-serif;
@@ -191,7 +191,7 @@ h2 {
 
 h3 {
     color: #373f46;
-    font-size: 13px;
+    font-size: 15px;
     margin-bottom: 10px;
     line-height: 18px;
     font-family: 'montserrat-regular', Helvetica, Arial, sans-serif;
@@ -209,7 +209,7 @@ h4 {
 h5 {
     color: #373f46;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 13px;
     margin-bottom: 10px;
     line-height: 18px;
   font-family: 'montserrat-regular', Helvetica, Arial, sans-serif;
@@ -2168,6 +2168,9 @@ a.arrow {
   width: 100%;
   float: none;
 }
+#home-content-region h2 {
+  margin-bottom: 10px;
+}
 
 #fwbc-on-site-new .banner-item h2 a, #fwbc-on-site-new .banner-item h4 a {
     color: #003956 !important;
@@ -2207,7 +2210,7 @@ a.arrow {
 #block-views-home-latest-news-block .views-field-body,
 #home-latest-news .views-field-body {
     padding: 0 8px 10px;
-    font-size: 12px;
+    font-size: 15px;
     line-height: 18px;
     max-height: 265px;
     float: left;
@@ -2215,6 +2218,11 @@ a.arrow {
 #block-views-home-latest-news-block .more-news,
 #home-latest-news .more-news {
     padding-top: 5px;
+}
+
+#block-views-home-latest-news-block .view-footer {
+  display: inline-block;
+  width: 100%;
 }
 
 .legal-cases-list .content-block {
