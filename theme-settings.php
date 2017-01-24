@@ -21,7 +21,7 @@ function fwbc_form_system_theme_settings_alter(&$form, &$form_state) {
 		$options = array();
 		foreach ($spages as $spage) { $options[$spage->nid] = $spage->title; }
 		$form['fwbc_pages'] = array(
-			'#type' => 'fieldset', 
+			'#type' => 'fieldset',
 			'#title' => t('Theme Pages'),
 			'#weight' => -3 // Place this to top of options page.
 		);
@@ -49,6 +49,18 @@ function fwbc_form_system_theme_settings_alter(&$form, &$form_state) {
 			'#options' => $options,
 			'#default_value' => theme_get_setting('fwbc_legal_cases_page')
 		);
+		$form['fwbc_pages']['fwbc_legal_cases_new_page'] = array(
+			'#type' => 'select',
+			'#title' => t('Legal cases new page'),
+			'#options' => $options,
+			'#default_value' => theme_get_setting('fwbc_legal_cases_new_page')
+		);
+		$form['fwbc_pages']['abcc_legal_cases_page'] = array(
+			'#type' => 'select',
+			'#title' => t('ABCC Legal cases page'),
+			'#options' => $options,
+			'#default_value' => theme_get_setting('abcc_legal_cases_page')
+		);
 		$form['fwbc_pages']['fwbc_submissions_page'] = array(
 			'#type' => 'select',
 			'#title' => t('Submissions page'),
@@ -74,7 +86,7 @@ function fwbc_form_system_theme_settings_alter(&$form, &$form_state) {
 		$options = array();
 		foreach ($webforms as $webform) { $options[$webform->nid] = $webform->title; }
 		$form['fwbc_forms'] = array(
-			'#type' => 'fieldset', 
+			'#type' => 'fieldset',
 			'#title' => t('Newsletter Sign Up Forms'),
 			'#weight' => -2 // Place this to top of options page.
 		);
@@ -133,7 +145,7 @@ function fwbc_form_system_theme_settings_alter(&$form, &$form_state) {
 		$options = array();
 		foreach ($homepage_slides as $homepage_slide) { $options[$homepage_slide->nid] = $homepage_slide->node_title; }
 		$form['fwbc_homepage_slider_tabs'] = array(
-			'#type' => 'fieldset', 
+			'#type' => 'fieldset',
 			'#title' => t('Homepage Slider Tabs'),
 			'#weight' => -1
 		);

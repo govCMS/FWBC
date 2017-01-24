@@ -236,6 +236,8 @@ function fwbc_get_page_type($vars)
     theme_get_setting('fwbc_latest_news_page') => 'latest_news',
     theme_get_setting('fwbc_newsletters_page') => 'newsletters',
     theme_get_setting('fwbc_legal_cases_page') => 'legal_cases',
+    theme_get_setting('fwbc_legal_cases_new_page') => 'legal_cases_new',
+    theme_get_setting('abcc_legal_cases_page') => 'abcc_legal_cases',
     theme_get_setting('fwbc_submissions_page') => 'submissions',
     theme_get_setting('fwbc_faqs_page') => 'faqs',
     theme_get_setting('fwbc_language_assitance_page') => 'language_assitance'
@@ -280,6 +282,12 @@ function fwbc_get_list_page($type)
       break;
     case "legal_case":
       $list_page = theme_get_setting('fwbc_legal_cases_page');
+      break;
+    case "legal_case_new":
+      $list_page = theme_get_setting('fwbc_legal_cases_new_page');
+      break;
+    case "abcc_legal_case":
+      $list_page = theme_get_setting('abcc_legal_cases_page');
       break;
     case "submission":
       $list_page = theme_get_setting('fwbc_submissions_page');
