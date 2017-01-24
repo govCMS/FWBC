@@ -27,7 +27,7 @@
   <?php print $head; ?>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <link rel="shortcut icon" href="<?php print '/' . $base_path . path_to_theme(); ?>/images/icons/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="57x57" href="<?php print '/' . $base_path . path_to_theme(); ?>/images/icons/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="<?php print '/' . $base_path . path_to_theme(); ?>/images/icons/apple-touch-icon-60x60.png">
@@ -42,7 +42,7 @@
   <link rel="icon" type="image/png" href="<?php print '/' . $base_path . path_to_theme(); ?>/images/icons/favicon-96x96.png" sizes="96x96">
   <link rel="icon" type="image/png" href="<?php print '/' . $base_path . path_to_theme(); ?>/images/icons/android-chrome-192x192.png" sizes="192x192">
   <link rel="icon" type="image/png" href="<?php print '/' . $base_path . path_to_theme(); ?>/images/icons/favicon-16x16.png" sizes="16x16">
-  
+
   <link rel="manifest" href="<?php print '/' . $base_path . path_to_theme(); ?>/icons/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="<?php print '/' . $base_path . path_to_theme(); ?>/icons/ms-icon-144x144.png">
@@ -96,7 +96,7 @@
       </div>
       <div class="wideBox-half right">
         <div class="footer-bottom"><?php fwbc_the_menu('menu-site-bottom-right-menu', array('class' => 'bottom-menu')); ?></div>
-        <p align="right"><a href="/node/123">Access to information</a></p>
+        <!--<p align="right"><a href="/node/123">Access to information</a></p>-->
       </div>
     </div>
   </div>
