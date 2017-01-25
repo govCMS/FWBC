@@ -23,7 +23,7 @@ $abreach = $_GET['abreach'];
 					<?php echo render($page['content']); ?>
 					<?php echo views_embed_view('abcc_legal_cases'); ?>
 					<br /><br />
-					<h2>Need more information about legal cases?</h2><p>For further information or assistance contact the FWBC Hotline on <strong>1800 003 338.</strong></p>
+                    <h2>Need more information?</h2><p>For further information, advice or assistance contact the ABCC on <strong>1800 003 338.</strong> or <a href="mailto:enquiry@abcc.gov.au">enquiry@abcc.gov.au</a></p>
 				</div>
 				<div class="refineSearch">
 					<form name="legal_cases_filter" id="legal-cases-filter">
