@@ -441,3 +441,17 @@ function fwbc_html_head_alter(&$head_elements)
     }
   }
 }
+
+
+function fwbc_js_alter(&$javascript) {
+  $replace_jquery = TRUE;
+
+  // do not apply to admin pages that may require lower version of jQuery provided by Drupal core
+  if (path_is_admin(current_path())) {
+    $replace_jquery = FALSE;
+  }
+
+  if ($replace_jquery) {
+    $javascript['misc/jquery.js']['data'] = drupal_get_path('theme', 'fwbc') . '/js/jquery.min.js';
+  }
+}

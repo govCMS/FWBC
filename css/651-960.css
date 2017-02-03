@@ -1,6 +1,6 @@
 @media screen and (min-width: 651px) and (max-width: 960px) {
 
-  .content {
+  html {
     background-image: url("../images/background-md.jpg");
   }
 

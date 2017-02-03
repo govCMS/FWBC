@@ -5,7 +5,7 @@
     max-width: 100%;
   }
 
-  .content {
+  html {
     background-image: url("../images/background-sm.jpg");
   }
 
