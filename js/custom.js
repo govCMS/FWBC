@@ -3,30 +3,40 @@
     Drupal.behaviors.fwbc = {
         attach: function (context, settings) {
             $(document).ready(function () {
+  
+              if(navigator.userAgent.match(/MSIE 10/i) || navigator.userAgent.match(/MSIE 11/i) || navigator.userAgent.match(/Trident\/7\./) || navigator.userAgent.match(/Edge\/12\./)) {
+                $('body').on("mousewheel", function () {
+                  event.preventDefault();
+                  var wd = event.wheelDelta;
+                  var csp = window.pageYOffset;
+                  window.scrollTo(0, csp - wd);
+                });
+              }
+              
                 $('#newsletterContent .newsletterStories .box').append('<span class="corner" />');
                 $('#pager ul li:last').addClass('last');
                 $('#footer .footer-menu:first').addClass('first');
                 $('#mainMenu li:last').parents('li').addClass('last');
 
-                $('.addthis_button_compact').live('focus', function () {
+                $('.addthis_button_compact').on('focus', function () {
                     setTimeout(function () {
                         var n = 1;
                         $('#at15s a').each(function () {
                             $(this).attr('tabindex', n++);
                         });
                     }, 500)
-                })
+                });
 
                 $('#mainMenu > li').each(function () {
                     var first = $(this).find('a:first');
                     var last = $(this).find('a:last');
-                    first.live('focus', function () {
+                    first.on('focus', function () {
                         $(this).parents('li').addClass('focus');
-                    })
-                    last.live('focusout', function () {
+                    });
+                    last.on('focusout', function () {
                         $(this).parents('li').removeClass('focus');
                     })
-                })
+                });
 
                 // Subnav
                 $('#subNav ul.secondLevel,#subNav ul.thirdLevel,#subNav ul.fourthLevel,#subNav ul.fifthLevel').parent('li').children('a').addClass('closed');
