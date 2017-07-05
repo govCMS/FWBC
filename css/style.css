@@ -2580,3 +2580,18 @@ ul.primary li a:hover {
 .region-top-information-banner .block p a:focus {
   text-decoration: none;
 }
+
+/*
+ * Google Translate Widget.
+ */
+
+#footer div.google_translate_widget {
+    clear: both;;
+    float: left;
+    margin-top: -20px;
+    padding-left: 5px;
+}
+
+#footer div.google_translate_widget a {
+    color: #000;
+}

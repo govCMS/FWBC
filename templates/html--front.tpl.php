@@ -93,6 +93,9 @@
       <div class="wideBox-half left">
         <div class="footer-bottom"><?php fwbc_the_block(0, FALSE); ?></div>
         <div class="footer-bottom"><?php fwbc_the_menu('menu-site-bottom-menu', array('class' => 'bottom-menu')); ?></div>
+          <div class="google_translate_widget">
+              <div id="google_translate_element"></div>
+          </div>
       </div>
       <div class="wideBox-half right">
         <div class="footer-bottom"><?php fwbc_the_menu('menu-site-bottom-right-menu', array('class' => 'bottom-menu')); ?></div>
@@ -103,6 +106,13 @@
 </div>
 
 <?php print $page_bottom; ?>
+
+<!-- Google Translate -->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+  }
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KCP8H5" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
