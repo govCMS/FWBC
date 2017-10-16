@@ -122,5 +122,6 @@
     '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-KCP8H5');</script>
 <!-- End Google Tag Manager -->
+<!-- front page template -->
 </body>
 </html>
