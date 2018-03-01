@@ -18,7 +18,7 @@ switch (fwbc_get_node_type($variables)) {
     ?>
     <div class="post-item">
       <div class="line"></div>
-      <h3><a href="<?php echo $node_url; ?>"><?php echo $title; ?></a></h3>
+      <h2><a href="<?php echo $node_url; ?>"><?php echo $title; ?></a></h2>
       <span class="date"><?php echo fwbc_get_post_added($submitted); ?></span>
 
       <p

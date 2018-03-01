@@ -38,6 +38,10 @@ ol, ul {
   font-size: 15px;
 }
 
+sup, sub {
+    font-size: 65%;
+}
+
 blockquote, q {
     quotes: none;
 }
@@ -177,6 +181,16 @@ h1 {
     font-family: 'montserrat-bold', Helvetica, Arial, sans-serif;
 }
 
+.post-date {
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #003956;
+    margin-bottom: 15px;
+    font-family: 'montserrat-bold', Helvetica, Arial, sans-serif;
+    display: block;
+}
+
 h2 {
     color: #003956;
     text-transform: uppercase;
@@ -251,12 +265,20 @@ p.category {
     color: #555;
 }
 
-.region-page-top, #mainMenu, #footer, .content, .wideBox, .content-box, .box, .wrapper, .header, .content > div {
+.region-page-top, #mainMenu, #footer, .content, .wideBox, .box, .wrapper, .header, .content > div {
     width: auto;
     max-width: 960px;
     margin: auto;
     text-align: left;
     position: relative;
+}
+
+.content-box {
+    max-width: none;
+}
+
+#subNav + .content-box {
+    max-width: 960px;
 }
 
 #mainMenu {
@@ -746,27 +768,33 @@ a#skipto:active {
 }
 
 .contentBox {
-    margin-left: 15px;
     background: #fff;
     position: relative;
     padding: 15px;
     /*float: left;*/
-    width: 100%;
-    max-width: 700px;
 }
 
 .contentBox.wide {
-    margin-left: 15px;
     background: #fff;
     position: relative;
     padding: 15px;
     float: left;
-    max-width: 700px;
 }
+
+#subNav + .content-box .contentBox.wide,
+#subNav + .content-box .contentBox {
+    max-width: 700px;
+    margin-left: 15px;
+}
+
+#subnav + .content-box .page-node-10 .contentBox.wide,
+#subnav + .content-box.page-node-10 .contentBox.wide { 
+  max-width: 950px;
+}
+
 .page-node-10 .contentBox.wide {
   margin: auto;
   float: none;
-  max-width: 950px;
 }
 .page-node-10 #leftContent {
   width: 100%;
@@ -990,6 +1018,22 @@ ul.bulletlist li {
     text-decoration: underline;
 }
 
+a.external {
+    text-decoration: none !important;
+    border-bottom: 1px solid #003956;
+}
+
+a.external:hover {
+    border-bottom: none;
+}
+
+a.external::after {
+    font-family: 'fontawesome';
+    content: " \f08e";
+    margin-left: 5px;
+    font-size: 12px;
+}
+
 .contentBox p a.button,
 .contentBox p a:hover,
 .contentBox p a:focus,
@@ -1126,26 +1170,35 @@ ul.links a {
     font-weight: bold;
 }
 
-a.button {
-    padding: 10px 10px;
+.agreement-clauses-content-wrapper .refineSearch .form-submit {
+    cursor: pointer;
+}
+
+a.button,
+.agreement-clauses-content-wrapper .refineSearch .form-submit {
+    padding: 10px 15px;
     background: #003956;
     color: #fff;
-    display: block;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
     font-weight: bold;
     text-align: center;
-    text-decoration: none;
+    text-decoration: underline;
+    border: 1px solid #003956;
+}
+
+.lt-ie8 a.button {
+    display: block;
 }
 
 a:hover.button,
 a:focus.button,
-a:active.button {
-    padding: 10px 10px;
-    background: #374047 url(../images/gradients.jpg) repeat-x center;
-    color: #fff;
-    display: block;
-    font-weight: bold;
-    text-align: center;
+a:active.button,
+.agreement-clauses-content-wrapper .refineSearch .form-submit:hover {
+    color: #003956;
     text-decoration: none;
+    background-color: transparent;
 }
 
 a.lightButton {
@@ -1587,27 +1640,46 @@ table {
 }
 
 table td, table th {
-
     background: #fff;
     line-height: 16px;
 }
 
 table th {
     font-weight: bold;
-    padding: 6px 2px;
+    padding: 6px 7px;
     min-width: 46px;
     color: #fff;
     background: #003956;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #dad8cd;
+}
+
+table th.views-field-field-number {
+    width: 50px;
+}
+
+table caption {
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: bold;
+    padding-top: 15px;
+    font-size: 14px;
 }
 
 th.active img {
     margin-left: 4px;
 }
 
+table.vertical-border th {
+    border: 1px solid #dad8cd;
+}
+
 table td {
     padding: 6px 7px;
     border-bottom: 1px solid #dad8cd;
+}
+
+table.vertical-border td {
+    border: 1px solid #dad8cd;
 }
 
 .scrollable {
@@ -2595,3 +2667,101 @@ ul.primary li a:hover {
 #footer div.google_translate_widget a {
     color: #000;
 }
+
+/* ------------------------------ */
+/* ----------- agreement-clauses-content-wrapper ----------- */
+/* ------------------------------ */
+.agreement-clauses-content-wrapper {
+    position: relative;
+}
+
+.agreement-clauses-content-wrapper .refineSearch {
+    margin: 0 0 10px;
+    overflow: hidden;
+    text-align: center;
+    float: none;
+    position: relative;
+    padding: 15px;
+}
+
+.agreement-clauses-content-wrapper .view-header {
+    margin-bottom: 20px;
+}
+
+.agreement-clauses-content-wrapper .refineSearch .ajax-progress {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -5px;
+    margin-left: -5px;
+}
+
+.agreement-clauses-content-wrapper .view-content table {
+    width: 100%;
+}
+
+.agreement-clauses-content-wrapper .refineSearch label {
+    color: #373f46;
+    font-size: 15px;
+    margin-bottom: 10px;
+    line-height: 18px;
+    font-weight: normal;
+    font-family: 'montserrat-regular', Helvetica, Arial, sans-serif;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.agreement-clauses-content-wrapper .content-block {
+    width: 100%;
+}
+
+.agreement-clauses-content-wrapper .view-empty {
+    text-align: center;
+    padding: 20px 0 0;
+}
+
+.agreement-clauses-content-wrapper .content-block table p {
+    font-size: 12px;
+}
+
+.agreement-clauses-content-wrapper .refineSearch .views-exposed-form .views-exposed-widget {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+
+.agreement-clauses-content-wrapper .refineSearch select {
+    max-width: 200px;
+    height: 20px;
+}
+
+.agreement-clauses-content-wrapper .refineSearch .views-submit-button,
+.agreement-clauses-content-wrapper .refineSearch .views-reset-button {
+    text-align: center;
+    width: 49%;
+    float: left;
+    padding: 15px 0 0 !important;
+}
+
+.agreement-clauses-content-wrapper .refineSearch .views-submit-button {
+    text-align: right;
+}
+
+.agreement-clauses-content-wrapper .refineSearch .views-reset-button {
+    text-align: left;
+}
+
+.agreement-clauses-content-wrapper .content-block {
+    float: none !important;
+}
+
+.agreement-clauses-content-wrapper .refineSearch .form-submit {
+    display: inline-block;
+    font-size: 15px;
+    text-decoration: none;
+    float: none;
+    margin: 0 10px;
+}
+

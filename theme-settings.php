@@ -61,6 +61,12 @@ function fwbc_form_system_theme_settings_alter(&$form, &$form_state) {
 			'#options' => $options,
 			'#default_value' => theme_get_setting('abcc_legal_cases_page')
 		);
+		$form['fwbc_pages']['abcc_agreement_clauses_page'] = array(
+			'#type' => 'select',
+			'#title' => t('ABCC Agreement Clauses page'),
+			'#options' => $options,
+			'#default_value' => theme_get_setting('abcc_agreement_clauses_page')
+		);
 		$form['fwbc_pages']['fwbc_submissions_page'] = array(
 			'#type' => 'select',
 			'#title' => t('Submissions page'),

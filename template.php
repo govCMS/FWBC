@@ -24,7 +24,7 @@ function fwbc_process_page(&$vars)
   $page_alias = str_replace('-', '_', $page_alias);
   // if single article, newsletter
   if (isset($vars['node'])) {
-    $sptypes = array('article', 'newsletter', 'newsletter_section', 'legal_case', 'abcc_legal_case', 'legal_case_new', 'submission');
+    $sptypes = array('article', 'newsletter', 'newsletter_section', 'legal_case', 'abcc_legal_case', 'legal_case_new', 'abcc_agreement_clauses', 'submission');
     if (in_array($vars['node']->type, $sptypes)) {
       $page_alias = 'single_' . $vars['node']->type;
     } else if ($vars['node']->nid == theme_get_setting('fwbc_newsletters_page')) {
@@ -172,7 +172,12 @@ function fwbc_the_menu($menu_delta, $menu_params = array(), $lisep = '')
     }
     $menu_html .= '>' . chr(10);
     foreach ($menu_tree as $menu_item) {
-      $menu_html .= '<li' . $ul_li_class . '>' . $menu_lisep . l($menu_item['link']['link_title'], $menu_item['link']['link_path']);
+      if ($menu_item['link']['link_path'] == '<front>') {
+        $menu_html .= '<li' . $ul_li_class . '>' . $menu_lisep . $menu_item['link']['link_title'];
+      }
+      else {
+        $menu_html .= '<li' . $ul_li_class . '>' . $menu_lisep . l($menu_item['link']['link_title'], $menu_item['link']['link_path']);
+      }
       if (count($menu_item['below'])) {
         $menu_html .= chr(10) . '<ul>' . chr(10);
         foreach ($menu_item['below'] as $submenu_item) {
@@ -240,6 +245,7 @@ function fwbc_get_page_type($vars)
     theme_get_setting('abcc_legal_cases_page') => 'abcc_legal_cases',
     theme_get_setting('fwbc_submissions_page') => 'submissions',
     theme_get_setting('fwbc_faqs_page') => 'faqs',
+    theme_get_setting('abcc_agreement_clauses_page') => 'abcc_agreement_clauses',
     theme_get_setting('fwbc_language_assitance_page') => 'language_assitance'
   );
   if (isset($ntypes[$node_data->nid])) {
@@ -285,6 +291,9 @@ function fwbc_get_list_page($type)
       break;
     case "legal_case_new":
       $list_page = theme_get_setting('fwbc_legal_cases_new_page');
+      break;
+    case "abcc_agreement_clauses":
+      $list_page = theme_get_setting('abcc_agreement_clauses_page');
       break;
     case "abcc_legal_case":
       $list_page = theme_get_setting('abcc_legal_cases_page');
@@ -453,5 +462,11 @@ function fwbc_js_alter(&$javascript) {
 
   if ($replace_jquery) {
     $javascript['misc/jquery.js']['data'] = drupal_get_path('theme', 'fwbc') . '/js/jquery.min.js';
+  }
+}
+
+function fwbc_preprocess_node(&$variables) {
+  if (!empty($variables['body'])) {
+    $variables['content']['body'][0]['#markup'] = $variables['body'][0]['value'];
   }
 }

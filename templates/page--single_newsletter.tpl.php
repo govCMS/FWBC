@@ -13,7 +13,8 @@
 		?>
 		<div id="leftContent">
 			<div class="contentBox">
-        <h1><span><?php echo fwbc_get_post_custom($parent_node, 'field_subtitle'); ?></span>Industry Update</h1>
+        <h1 class="post-title">Industry Update</h1>
+        <span class="post-date"><?php echo fwbc_get_post_custom($parent_node, 'field_subtitle'); ?></span>
 				<?php if ($tabs): ?>
 				  <div class="tabs">
 					<?php print render($tabs); ?>
