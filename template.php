@@ -467,6 +467,6 @@ function fwbc_js_alter(&$javascript) {
 
 function fwbc_preprocess_node(&$variables) {
   if (!empty($variables['body'])) {
-    $variables['content']['body'][0]['#markup'] = $variables['body'][0]['value'];
+    $variables['content']['body'][LANGUAGE_NONE][0]['#markup'] = $variables['body'][0]['value'];
   }
 }
